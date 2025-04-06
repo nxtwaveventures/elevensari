@@ -385,22 +385,22 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            background: white;
+            background: linear-gradient(135deg, white, #f5f5f5);
             border-radius: 50%;
             width: 50px;
             height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: var(--shadow-md);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(212, 175, 55, 0.1);
             cursor: pointer;
             z-index: 100;
-            border: 1px solid var(--border-light);
             transition: transform 0.2s ease;
         }
 
         .cart-icon-container:hover {
-            transform: scale(1.05);
+            background: linear-gradient(135deg, #fcf9f6, white);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(179, 0, 0, 0.1);
         }
 
         .cart-icon {
@@ -413,7 +413,7 @@
             position: absolute;
             top: -5px;
             right: -5px;
-            background: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
             color: white;
             border-radius: 50%;
             width: 20px;
@@ -423,7 +423,7 @@
             justify-content: center;
             font-size: 12px;
             font-weight: bold;
-            border: 1px solid white;
+            box-shadow: 0 2px 5px rgba(179, 0, 0, 0.3);
         }
 
         .cart-modal {
@@ -448,37 +448,48 @@
             width: 90%;
             max-width: 600px;
             border-radius: 0.5rem;
-            padding: 2rem;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
             position: relative;
-            max-height: 80vh;
-            overflow-y: auto;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
         }
 
         .cart-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
+            padding: 1.5rem;
             border-bottom: 1px solid var(--border-light);
+            background: linear-gradient(135deg, #fff, #f9f5ef);
         }
 
         .cart-header h3 {
             margin: 0;
             color: var(--primary-color);
+            font-size: 1.3rem;
+            font-weight: 600;
         }
 
         .cart-items {
-            max-height: 50vh;
+            padding: 1.5rem;
             overflow-y: auto;
+            max-height: 400px;
+            flex-grow: 1;
         }
 
         .cart-item {
             display: flex;
-            margin-bottom: 1rem;
-            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
             border-bottom: 1px solid var(--border-light);
+        }
+
+        .cart-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
         }
 
         .cart-item-image {
@@ -490,26 +501,28 @@
         }
 
         .cart-item-details {
-            flex: 1;
             margin-left: 1rem;
+            flex-grow: 1;
         }
 
         .cart-item-title {
+            margin: 0 0 0.5rem;
             font-weight: 600;
-            margin: 0 0 0.25rem;
             color: var(--text-primary);
+            font-size: 1.1rem;
         }
 
         .cart-item-price {
-            font-weight: 600;
             color: var(--primary-color);
-            margin-bottom: 0.5rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
         }
 
         .cart-quantity-controls {
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            margin-bottom: 0.8rem;
         }
 
         .cart-quantity-btn {
@@ -518,97 +531,81 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: var(--bg-light);
+            background: white;
             border: 1px solid var(--border-light);
             border-radius: 4px;
             cursor: pointer;
             font-weight: bold;
-            color: var(--text-primary);
+            transition: all 0.2s ease;
+        }
+
+        .cart-quantity-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
         }
 
         .cart-quantity {
-            font-weight: 600;
+            font-weight: 500;
         }
 
         .cart-remove {
-            border: none;
             background: none;
-            color: #ff5252;
+            border: none;
+            color: #888;
             cursor: pointer;
             font-size: 0.9rem;
-            margin-top: 0.5rem;
+            padding: 0;
+            text-decoration: underline;
+            transition: color 0.2s ease;
         }
 
-        .cart-summary {
-            margin-top: 1.5rem;
-            padding-top: 1rem;
+        .cart-remove:hover {
+            color: var(--primary-color);
+        }
+
+        .cart-footer {
+            padding: 1.5rem;
             border-top: 1px solid var(--border-light);
+            background: linear-gradient(135deg, #f9f5ef, #fff);
         }
 
         .cart-total {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-
-        .cart-total-price {
-            color: var(--primary-color);
-        }
-
-        .empty-cart-message {
-            text-align: center;
-            color: var(--text-secondary);
-            padding: 2rem 0;
-        }
-
-        .cart-actions {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
         }
 
         .checkout-btn {
-            flex: 3;
             background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
             color: white;
             border: none;
             padding: 0.75rem 1.5rem;
-            border-radius: 0.25rem;
+            border-radius: 0.5rem;
             font-weight: 600;
             cursor: pointer;
-            font-size: 1rem;
+            width: 100%;
+            font-size: 1.1rem;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .checkout-btn:hover {
             transform: translateY(-2px);
-            box-shadow: var(--shadow-sm);
+            box-shadow: 0 5px 15px rgba(179, 0, 0, 0.2);
         }
 
-        .continue-shopping-btn {
-            flex: 2;
-            background: white;
-            color: var(--primary-color);
-            border: 1px solid var(--primary-color);
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.25rem;
-            font-weight: 600;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.2s ease;
+        .empty-cart-message {
+            text-align: center;
+            padding: 2rem 0;
+            color: #888;
+            font-style: italic;
         }
 
-        .continue-shopping-btn:hover {
-            background-color: rgba(179, 0, 0, 0.05);
-        }
-
-        .added-animation {
-            animation: popAnimation 0.5s ease;
-        }
-
-        @keyframes popAnimation {
+        /* Animation for cart icon */
+        @keyframes added-animation {
             0% {
                 transform: scale(1);
             }
@@ -620,6 +617,10 @@
             100% {
                 transform: scale(1);
             }
+        }
+
+        .added-animation {
+            animation: added-animation 0.5s ease;
         }
     </style>
 </head>
@@ -818,86 +819,103 @@
                 <h3>Secure Checkout</h3>
                 <button class="close-modal" onclick="closePaymentModal()">&times;</button>
             </div>
+
             <div id="productDetailsContainer" class="payment-product">
-                <!-- Product details will be inserted here -->
+                <!-- Product details will be populated here -->
             </div>
+
             <form id="paymentForm">
                 <div class="payment-form-group">
                     <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" name="fullName" required>
+                    <input type="text" id="fullName" required>
                 </div>
+
                 <div class="payment-form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" required>
                 </div>
+
                 <div class="payment-form-group">
                     <label for="address">Shipping Address</label>
-                    <input type="text" id="address" name="address" required>
+                    <input type="text" id="address" required>
                 </div>
+
                 <div class="payment-form-row">
-                    <div class="payment-form-group" style="flex: 2;">
+                    <div class="payment-form-group" style="flex: 1;">
                         <label for="city">City</label>
-                        <input type="text" id="city" name="city" required>
+                        <input type="text" id="city" required>
                     </div>
                     <div class="payment-form-group" style="flex: 1;">
-                        <label for="pincode">PIN Code</label>
-                        <input type="text" id="pincode" name="pincode" required>
+                        <label for="pincode">Pincode</label>
+                        <input type="text" id="pincode" required>
                     </div>
                 </div>
+
                 <div class="payment-form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="payment-form-group">
-                    <label>Payment Method</label>
-                    <div class="card-icons">
-                        <img src="https://cdn-icons-png.flaticon.com/128/349/349221.png" class="card-icon" alt="Visa">
-                        <img src="https://cdn-icons-png.flaticon.com/128/349/349228.png" class="card-icon"
-                            alt="MasterCard">
-                        <img src="https://cdn-icons-png.flaticon.com/128/349/349230.png" class="card-icon"
-                            alt="American Express">
-                        <img src="https://cdn-icons-png.flaticon.com/128/6124/6124998.png" class="card-icon" alt="UPI">
-                    </div>
-                    <select id="paymentMethod" name="paymentMethod" required>
-                        <option value="">Select Payment Method</option>
+                    <label for="paymentMethod">Payment Method</label>
+                    <select id="paymentMethod" required onchange="togglePaymentDetails()">
+                        <option value="" selected disabled>Select payment method</option>
                         <option value="card">Credit/Debit Card</option>
                         <option value="upi">UPI</option>
-                        <option value="netbanking">Net Banking</option>
                         <option value="cod">Cash on Delivery</option>
                     </select>
                 </div>
+
                 <div id="cardDetails" style="display: none;">
+                    <div class="card-icons">
+                        <img src="https://cdn-icons-png.flaticon.com/128/349/349221.png" class="card-icon" alt="Visa">
+                        <img src="https://cdn-icons-png.flaticon.com/128/349/349228.png" class="card-icon"
+                            alt="Mastercard">
+                        <img src="https://cdn-icons-png.flaticon.com/128/349/349247.png" class="card-icon"
+                            alt="American Express">
+                    </div>
+
                     <div class="payment-form-group">
                         <label for="cardNumber">Card Number</label>
-                        <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456">
+                        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
                     </div>
+
                     <div class="payment-form-row">
-                        <div class="payment-form-group">
+                        <div class="payment-form-group" style="flex: 2;">
                             <label for="expiryDate">Expiry Date</label>
-                            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY">
+                            <input type="text" id="expiryDate" placeholder="MM/YY">
                         </div>
-                        <div class="payment-form-group">
+                        <div class="payment-form-group" style="flex: 1;">
                             <label for="cvv">CVV</label>
-                            <input type="text" id="cvv" name="cvv" placeholder="123">
+                            <input type="text" id="cvv" placeholder="123">
                         </div>
                     </div>
                 </div>
+
                 <div id="upiDetails" style="display: none;">
                     <div class="payment-form-group">
                         <label for="upiId">UPI ID</label>
-                        <input type="text" id="upiId" name="upiId" placeholder="username@upi">
+                        <input type="text" id="upiId" placeholder="username@upi">
                     </div>
                 </div>
-                <button type="submit" class="payment-btn">Pay Now</button>
+
+                <button type="submit" class="payment-btn">Place Order</button>
+
                 <div class="secure-text">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 6c1.4 0 2.8 1.1 2.8 2.5V11c.6 0 1.2.6 1.2 1.2v3.5c0 .7-.6 1.3-1.2 1.3h-5.5c-.7 0-1.3-.6-1.3-1.2v-3.5c0-.7.6-1.3 1.2-1.3V9.5C9.2 8.1 10.6 7 12 7zm0 1.2c-.8 0-1.5.7-1.5 1.5V11h3v-1.3c0-.8-.7-1.5-1.5-1.5z" />
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                        </path>
                     </svg>
-                    Secure Encrypted Payment
+                    <span>Secure payment with 256-bit encryption</span>
                 </div>
             </form>
         </div>
+    </div>
+
+    <!-- Cart Icon -->
+    <div class="cart-icon-container" onclick="openCartModal()">
+        <svg class="cart-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+            </path>
+        </svg>
+        <span class="cart-count">0</span>
     </div>
 
     <!-- Cart Modal -->
@@ -907,28 +925,19 @@
                 <h3>Your Shopping Cart</h3>
                 <button class="close-modal" onclick="closeCartModal()">&times;</button>
             </div>
+
             <div id="cartItems" class="cart-items">
-                <!-- Cart items will be inserted here -->
+                <!-- Cart items will be dynamically added here -->
             </div>
-            <div class="cart-summary">
+
+            <div class="cart-footer">
                 <div class="cart-total">
                     <span>Total:</span>
-                    <span id="cartTotal" class="cart-total-price">₹0</span>
+                    <span id="cartTotal">₹0</span>
                 </div>
-            </div>
-            <div class="cart-actions">
-                <button class="continue-shopping-btn" onclick="closeCartModal()">Continue Shopping</button>
                 <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
             </div>
         </div>
-    </div>
-
-    <div class="cart-icon-container" onclick="openCartModal()">
-        <svg class="cart-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
-        </svg>
-        <span class="cart-count">0</span>
     </div>
 
     <script>
@@ -1218,7 +1227,60 @@
 
             openPaymentModal();
         }
+
+        function togglePaymentDetails() {
+            const paymentMethod = document.getElementById('paymentMethod').value;
+            const cardDetails = document.getElementById('cardDetails');
+            const upiDetails = document.getElementById('upiDetails');
+
+            // Hide all payment method details first
+            cardDetails.style.display = 'none';
+            upiDetails.style.display = 'none';
+
+            // Show selected payment method details
+            if (paymentMethod === 'card') {
+                cardDetails.style.display = 'block';
+            } else if (paymentMethod === 'upi') {
+                upiDetails.style.display = 'block';
+            }
+        }
+
+        // Add submit handler for payment form
+        document.getElementById('paymentForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const paymentMethod = document.getElementById('paymentMethod').value;
+
+            // Validate payment details based on the selected method
+            if (paymentMethod === 'card') {
+                const cardNumber = document.getElementById('cardNumber').value;
+                const expiryDate = document.getElementById('expiryDate').value;
+                const cvv = document.getElementById('cvv').value;
+
+                if (!cardNumber || !expiryDate || !cvv) {
+                    alert('Please fill in all card details');
+                    return;
+                }
+            } else if (paymentMethod === 'upi') {
+                const upiId = document.getElementById('upiId').value;
+
+                if (!upiId) {
+                    alert('Please enter your UPI ID');
+                    return;
+                }
+            }
+
+            // Show order confirmation
+            alert('Thank you for your order! Your payment has been processed successfully.');
+
+            // Clear cart and close payment modal
+            cart = [];
+            updateCart();
+            closePaymentModal();
+        });
     </script>
 </body>
+
+</html>
 
 </html>
