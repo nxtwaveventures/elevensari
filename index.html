@@ -1287,6 +1287,109 @@
     }
   </style>
 
+  <style>
+    /* Hero Section Styles */
+    .hero-section {
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(179, 0, 0, 0.7)), url('https://source.unsplash.com/random/1600x900/?saree,silk');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      padding: 2rem;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .hero-title .white-text {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: white;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-title .gold-text {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #D4AF37;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-subtitle {
+      color: white;
+      font-size: 1.3rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background-color: #D4AF37;
+      color: #333;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+    }
+
+    .hero-cta:hover {
+      background-color: #e5c158;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+
+      .hero-title .white-text,
+      .hero-title .gold-text {
+        font-size: 2.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+
+      .hero-cta {
+        padding: 0.8rem 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="white-text">WOVEN IN GOLD,</span>
+        <span class="gold-text">DRAPED IN LEGACY</span>
+      </h1>
+      <p class="hero-subtitle">Experience the imperial splendor of authentic Varanasi silks, where centuries of
+        craftsmanship meet timeless elegance</p>
+      <a href="#collection" class="hero-cta">Discover The Collection</a>
+    </div>
+  </div>
+
   <div id="iz29ek" class="gjs-grid-row waitlist-section">
     <div id="ik2rdi" class="gjs-grid-column waitlist-content">
       <h2 id="i83vu9" class="gjs-heading waitlist-title"><strong data-start="173" data-end="214">Join Our Waitlist & Win
@@ -2518,6 +2621,6 @@
       <a id="iwgwt5" class="gjs-button waitlist-button" onclick="openWaitlistModal()">Join Waitlist</a>
     </div>
   </div>
-  </body>
+</body>
 
 </html>
