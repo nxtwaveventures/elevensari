@@ -95,10 +95,130 @@
         opacity: 0.7;
       }
     }
+
+    /* Header Navigation Styles */
+    .site-header {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.8rem 2rem;
+    }
+
+    .logo a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .logo-highlight {
+      background: linear-gradient(135deg, #B30000, #D4AF37);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .main-nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 1.5rem;
+    }
+
+    .main-nav .nav-link {
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.5rem 0.8rem;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .main-nav .nav-link:hover {
+      color: #B30000;
+    }
+
+    .main-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      background: linear-gradient(to right, #B30000, #D4AF37);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .main-nav .nav-link:hover::after {
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        padding: 1rem;
+      }
+
+      .logo {
+        margin-bottom: 1rem;
+      }
+
+      .main-nav ul {
+        gap: 0.8rem;
+      }
+
+      .main-nav .nav-link {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.6rem;
+      }
+    }
   </style>
 </head>
 
 <body id="iau9">
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+          <span class="logo-text">11<span class="logo-highlight">Sari</span></span>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="about-us.html" class="nav-link">About Us</a></li>
+          <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+          <li><a href="know-more.html" class="nav-link">Know More</a></li>
+          <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <div id="hero-banner" class="gjs-grid-row">
     <div class="gjs-grid-column hero-content">
       <h1 class="hero-title">WOVEN IN GOLD, <span class="hero-accent">DRAPED IN LEGACY</span></h1>
