@@ -518,20 +518,67 @@
       box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
     }
 
-    .collection-cta::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, transparent, rgba(179, 0, 0, 0.3), transparent);
-      transform: translateX(-100%);
-      transition: transform 0.6s ease;
+    /* Google Reviews Section */
+    .google-reviews {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, #f8f4e5, #ffffff);
+      text-align: center;
     }
 
-    .collection-cta:hover::after {
-      transform: translateX(100%);
+    .google-reviews h2 {
+      color: #8B0000;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .google-reviews p {
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      color: #333;
+    }
+
+    .google-rating {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .google-stars {
+      color: #FBBC05;
+      font-size: 2rem;
+      margin-right: 0.5rem;
+    }
+
+    .rating-text {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .view-reviews {
+      display: inline-block;
+      background: #4285F4;
+      color: white;
+      padding: 0.8rem 2rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.3s ease;
+      margin-top: 1rem;
+    }
+
+    .view-reviews:hover {
+      background: #3367D6;
+      transform: translateY(-3px);
+    }
+
+    .google-logo {
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+      margin-right: 8px;
     }
 
     @media (max-width: 768px) {
@@ -3152,8 +3199,8 @@
         });
       });
 
-      // Auto slide
-      setInterval(nextTestimonial, 6000);
+      // Auto slide every 5 seconds
+      setInterval(nextTestimonial, 5000);
     });
   </script>
 
@@ -3529,6 +3576,117 @@
       }
     });
   </script>
+
+  <!-- Google Reviews Section -->
+  <div class="google-reviews">
+    <div class="container">
+      <h2>Our Google Reviews</h2>
+      <p>Join hundreds of satisfied customers who love our authentic Banarasi sarees.</p>
+      <div class="google-rating">
+        <div class="google-stars">★★★★★</div>
+        <div class="rating-text">4.9 out of 5 based on 45+ reviews</div>
+      </div>
+      <div class="google-badge">
+        <img
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCI+PHBhdGggZmlsbD0iI0ZGQzEwNyIgZD0iTTQzLjYxMTIwMDUsMjAuMDgzMDAyN0g0MlYyMEgyNHY4aDExLjMwMzAwMWMtMS42NDk5OTk2LDQuNjU3MDAwNy02LjA4MDAwMSw4LTExLjMwMzAwMSw4Yy02LjYyNzAwMDgsMC0xMi01LjM3MzAwMDgtMTItMTJjMC02LjYyNzAwMDgsNS4zNzI5OTkyLTEyLDEyLTEyYzMuMDUzOTk5NSwwLDUuODM3MDAwMywxLjE0NDAwMDUsNy45NjEwMDA0LDMuMDM5MDAxNUw0MC40ODgyLDkuMDYxOTk5NkMzNi42NTgxOTk3LDUuNTA2MDAwNSwzMC41NiwzLDI0LDNDMTIuOTU0MDAwNSwzLDQsMTEuOTUzOTk5NSw0LDIzcy04Ljk1NDAwMDUsMjAsMjAsMjBjMTEuMDQ1OTk5LDAsMjAtOC45NTQ5OTU3LDIwLTIwQzQ0LDIyLjE3MDk5NjcuODU4MDAxNywyMS4wMjU5OTcyLDQzLjYxMTIwMDUsMjAuMDgzMDAyN3oiLz48cGF0aCBmaWxsPSIjRkYzRDAwIiBkPSJNNi4zMDYwMDI2LDE0LjY5MTAwMTlMMTAuNzI5NDM0OCwxOC4wMTA0MTU2QzEyLjI3NjU5OTksMTQuOTA5MjA0MSAxNS44Nzc5OTk4LDEzLDIwLDEzQzIzLjA1Mzk5OTUsMTMsMjUuODM3MDAwMywxNC4xNDQwMDA1LDI3Ljk2MTAwMDQsMTYuMDM5MDAxNUwzMy40ODgyLDEwLjA2MTk5OTZDMjkuNjU4MTk5Nyw2LjUwNjAwMDUsMjMuNTYsNCwxNyw0QzEwLjkyNUE3Niw0LDUuNTY3OTk5LDguNDg2OTcyMyw2LjMwNjAwMjYsMTQuNjkxMDAxOXoiLz48cGF0aCBmaWxsPSIjNENBRjUwIiBkPSJNNjAsMjBjMC0zLjMxMTk5OTUtMC44MzM5OTk2LTYuNDEwMDAzNy0yLjI4ODk5NTctOS4xMDg5OTc4Yy0wLjAzNDIxNjYtMC4wNjQ0ODMxLTAuMDcwMzg1MSDMC4xMjg0MTIzLTAuMDk5NjA5NC0wLjE5NDMzNkw1NC4yNjMwMDM1LDEyLjkzMTk5MTYiLz48cGF0aCBmaWxsPSIjMTk3NkQyIiBkPSJNNDMuNjExMjAwNSwyMC4wODMwMDI3SDQyVjIwSDI0djhoMTEuMzAzMDAxYy0wLjc5MjAwMDgsMi4yMzY5OTk1LTIuMTI0MDAxLDQuMTY1OTk5NS0zLjgzMjAwMDcsNS41NzE5OTkxbDUuODgzNjQ5OCw0LjU4NDg0NDRDUDY3MDIxMTcsMzQuMDQ2OTc3NyA0NC41NLDMwLjA3MzAwMDMsNDQsMjZjMC0xLjk4ODAwMDktMC4zNTE5OTk4LTMuODk2OTk5OS0wLjk4NzE4NDEtNS42ODAwMDkxQzQzLjY5MDMwMTUsMjAuMjExOTk5LDQzLjY1MDM0MzMsMjAuMTQ3OTk1NiA0My42MTEyMDA1LDIwLjA4MzAwMjd6Ii8+PHBhdGggZmlsbD0iI0ZGQzEwNyIgZD0iTTI0LDQ0YzYuNTYsNDQsMTIuNjU4MTk5Nyw0MS40OTM5OTk1LDE2LjQ4ODM0MjMsMzcuOTM4MDAzNEwzNi40NzEwMDQ1LDMzLjM3MTAxLTVDMzMuMTQ2MDAzNywzNi45NDA4MTIzIDI4LjcwMzYvNDgsMjQsNDR6Ii8+PHBhdGggZmlsbD0iI0REMTEZGC47D48ZGIgGZpbGw9IiM0Q0FGNTA0IiBkPSJNMjQsNDRjMTEuMDQ1OTk5LDAsMjAtOC45NTQ5OTU3LDIwLTIwYzAtMS45MzA5OTc4LTAuMjgxMDAxLTMuNzk4MDkwMy0wLjc5MjOTk3NC01LjU1MDk5NDlsLTYuNjk1MDAxOSw1LjE3Mj99NTYyQzM3LjI4NTAwMDcsNDIuOTM4NjQ0NCwzMS4xNTM2NDI3LDQ0LDI0LDQ0eiIvPjwvc3ZnPg=="
+          alt="Google" class="google-logo">
+        <a href="https://g.co/kgs/BJzV3Hd" target="_blank" class="view-reviews">Read our reviews on Google</a>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* Google Reviews Section */
+    .google-reviews {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, #f9f9f9, #ffffff);
+      text-align: center;
+      border-top: 1px solid #f0f0f0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .google-reviews h2 {
+      color: #8B0000;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .google-reviews p {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      color: #555;
+      font-size: 1.1rem;
+    }
+
+    .google-rating {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      gap: 1rem;
+    }
+
+    .google-stars {
+      color: #FBBC05;
+      font-size: 2rem;
+      margin-right: 0.5rem;
+    }
+
+    .rating-text {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #555;
+    }
+
+    .google-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      width: fit-content;
+      margin: 0 auto;
+      transition: transform 0.3s ease;
+    }
+
+    .google-badge:hover {
+      transform: translateY(-5px);
+    }
+
+    .google-logo {
+      width: 32px;
+      height: 32px;
+      margin-right: 1rem;
+    }
+
+    .view-reviews {
+      display: inline-block;
+      color: #4285F4;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-size: 1.1rem;
+    }
+
+    .view-reviews:hover {
+      color: #3367D6;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .google-rating {
+        flex-direction: column;
+      }
+
+      .google-stars {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+      }
+    }
+  </style>
 
 </body>
 
