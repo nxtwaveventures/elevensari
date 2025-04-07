@@ -174,12 +174,12 @@
       top: 0;
       left: 0;
       width: 100%;
-      background: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(135deg, rgba(179, 0, 0, 0.97), rgba(139, 0, 0, 0.97));
+      box-shadow: 0 2px 10px rgba(139, 0, 0, 0.2);
       z-index: 1000;
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+      border-bottom: 1px solid rgba(255, 204, 204, 0.3);
     }
 
     .header-container {
@@ -201,11 +201,11 @@
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
       font-weight: 700;
-      color: #333;
+      color: white;
     }
 
     .logo-highlight {
-      background: linear-gradient(135deg, #B30000, #D4AF37);
+      background: linear-gradient(135deg, #ffffff, #ffcccc);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -220,7 +220,7 @@
     }
 
     .main-nav .nav-link {
-      color: #333;
+      color: white;
       text-decoration: none;
       font-weight: 500;
       font-size: 1rem;
@@ -231,7 +231,7 @@
     }
 
     .main-nav .nav-link:hover {
-      color: #B30000;
+      color: #ffcccc;
     }
 
     .main-nav .nav-link::after {
@@ -241,7 +241,7 @@
       height: 2px;
       bottom: 0;
       left: 50%;
-      background: linear-gradient(to right, #B30000, #D4AF37);
+      background: linear-gradient(to right, #ffcccc, #ffffff);
       transition: all 0.3s ease;
       transform: translateX(-50%);
     }
@@ -499,7 +499,7 @@
     /* Collection button styles */
     .collection-cta {
       display: inline-block;
-      background: linear-gradient(135deg, #D4AF37, #B8860B);
+      background: linear-gradient(135deg, #B30000, #8B0000);
       color: white;
       padding: 0.8rem 2rem;
       border-radius: 0.5rem;
@@ -508,34 +508,53 @@
       margin-top: 1rem;
       margin-left: 1rem;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+      box-shadow: 0 4px 15px rgba(179, 0, 0, 0.25);
       position: relative;
       overflow: hidden;
     }
 
     .collection-cta:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+      box-shadow: 0 8px 25px rgba(179, 0, 0, 0.3);
+    }
+
+    .collection-cta::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+
+    .collection-cta:hover::after {
+      transform: translateX(100%);
     }
 
     /* Google Reviews Section */
     .google-reviews {
-      padding: 4rem 0;
-      background: linear-gradient(135deg, #f8f4e5, #ffffff);
+      padding: 5rem 0;
+      background: linear-gradient(135deg, #fff5f5, #ffffff);
       text-align: center;
+      border-top: 1px solid #ffecec;
+      border-bottom: 1px solid #ffecec;
     }
 
     .google-reviews h2 {
       color: #8B0000;
       font-size: 2.5rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       font-family: 'Playfair Display', serif;
     }
 
     .google-reviews p {
-      max-width: 800px;
+      max-width: 700px;
       margin: 0 auto 2rem;
-      color: #333;
+      color: #555;
+      font-size: 1.1rem;
     }
 
     .google-rating {
@@ -543,6 +562,7 @@
       align-items: center;
       justify-content: center;
       margin-bottom: 1.5rem;
+      gap: 1rem;
     }
 
     .google-stars {
@@ -554,64 +574,56 @@
     .rating-text {
       font-size: 1.2rem;
       font-weight: 600;
-      color: #333;
+      color: #555;
+    }
+
+    .google-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      box-shadow: 0 4px 15px rgba(179, 0, 0, 0.08);
+      width: fit-content;
+      margin: 0 auto;
+      transition: transform 0.3s ease;
+      border: 1px solid #ffecec;
+    }
+
+    .google-badge:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(179, 0, 0, 0.12);
+    }
+
+    .google-logo {
+      width: 32px;
+      height: 32px;
+      margin-right: 1rem;
     }
 
     .view-reviews {
       display: inline-block;
-      background: #4285F4;
-      color: white;
-      padding: 0.8rem 2rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
+      color: #B30000;
       font-weight: 600;
-      transition: background 0.3s ease, transform 0.3s ease;
-      margin-top: 1rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-size: 1.1rem;
     }
 
     .view-reviews:hover {
-      background: #3367D6;
-      transform: translateY(-3px);
-    }
-
-    .google-logo {
-      width: 24px;
-      height: 24px;
-      vertical-align: middle;
-      margin-right: 8px;
+      color: #8B0000;
+      text-decoration: underline;
     }
 
     @media (max-width: 768px) {
-      .showcase-gallery {
-        height: 350px;
+      .google-rating {
+        flex-direction: column;
       }
 
-      .saree-tag {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-        margin: 0 0 1.5rem 1rem;
-      }
-
-      .gallery-control {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
-      }
-
-      .showcase-title {
-        font-size: 1.6rem;
-      }
-
-      .showcase-text {
-        font-size: 1rem;
-      }
-
-      .feature-highlights {
-        gap: 1rem;
-      }
-
-      .showcase-description {
-        padding: 1.5rem 1rem;
+      .google-stars {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
       }
     }
 
@@ -1457,6 +1469,135 @@
       .hero-cta {
         padding: 0.8rem 2rem;
       }
+    }
+  </style>
+
+  <!-- Global styles for red-themed site -->
+  <style>
+    body {
+      background-color: #fffafa;
+      /* Snow - a very light red tint */
+      color: #333;
+    }
+
+    /* Special hover effects for buttons and links */
+    .btn,
+    .cta-button,
+    .collection-cta,
+    .view-all-btn,
+    .showcase-cta,
+    .waitlist-button {
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .btn::before,
+    .cta-button::before,
+    .collection-cta::before,
+    .view-all-btn::before,
+    .showcase-cta::before,
+    .waitlist-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+      z-index: -1;
+      transition: left 0.7s ease;
+    }
+
+    .btn:hover::before,
+    .cta-button:hover::before,
+    .collection-cta:hover::before,
+    .view-all-btn:hover::before,
+    .showcase-cta:hover::before,
+    .waitlist-button:hover::before {
+      left: 100%;
+    }
+
+    /* Red pulse animation for important elements */
+    @keyframes redPulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(179, 0, 0, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 10px rgba(179, 0, 0, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(179, 0, 0, 0);
+      }
+    }
+
+    .btn-primary,
+    .waitlist-button,
+    .featured-btn {
+      animation: redPulse 2s infinite;
+    }
+
+    /* Color transitions */
+    a,
+    button,
+    .nav-link,
+    .btn {
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* Red highlight effect */
+    .highlight-red {
+      position: relative;
+      display: inline-block;
+    }
+
+    .highlight-red::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 30%;
+      background-color: rgba(179, 0, 0, 0.1);
+      z-index: -1;
+      transition: height 0.3s ease;
+    }
+
+    .highlight-red:hover::after {
+      height: 100%;
+    }
+
+    /* Viral sharing button styles */
+    .share-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .share-button {
+      background: white;
+      color: #B30000;
+      border: 1px solid #B30000;
+      padding: 8px 15px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .share-button:hover {
+      background: #B30000;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .share-button i {
+      font-size: 16px;
     }
   </style>
 </head>
@@ -3595,85 +3736,182 @@
     </div>
   </div>
 
+  <!-- Social Sharing Section -->
+  <div class="social-share-section">
+    <div class="container">
+      <h2>Share the <span class="highlight-red">Magic</span> of Banarasi Sarees</h2>
+      <p>Love our collection? Share it with friends and family who appreciate authentic craftsmanship.</p>
+
+      <div class="share-container">
+        <div class="share-image">
+          <img src="https://source.unsplash.com/random/600x400/?saree,silk,indian" alt="Beautiful Banarasi Saree"
+            class="share-preview">
+          <div class="share-overlay">
+            <span>11Sari.com</span>
+          </div>
+        </div>
+
+        <div class="share-options">
+          <p class="share-text">Spotted a saree you love? Share it now and <span class="highlight-red">get 10%
+              off</span> on your next purchase!</p>
+
+          <div class="share-buttons">
+            <button class="share-button whatsapp-share">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+              </svg>
+              WhatsApp
+            </button>
+
+            <button class="share-button facebook-share">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+              </svg>
+              Facebook
+            </button>
+
+            <button class="share-button instagram-share">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+              </svg>
+              Instagram
+            </button>
+
+            <button class="share-button pinterest-share">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0z" />
+              </svg>
+              Pinterest
+            </button>
+          </div>
+
+          <div class="share-coupon">
+            <p>Use code: <span class="coupon-code">SHARE10</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <style>
-    /* Google Reviews Section */
-    .google-reviews {
+    /* Social Sharing Section Styling */
+    .social-share-section {
       padding: 5rem 0;
-      background: linear-gradient(135deg, #f9f9f9, #ffffff);
+      background: linear-gradient(135deg, #fff5f5, #fff9f9);
       text-align: center;
-      border-top: 1px solid #f0f0f0;
-      border-bottom: 1px solid #f0f0f0;
     }
 
-    .google-reviews h2 {
+    .social-share-section h2 {
       color: #8B0000;
       font-size: 2.5rem;
       margin-bottom: 1rem;
       font-family: 'Playfair Display', serif;
     }
 
-    .google-reviews p {
+    .social-share-section p {
       max-width: 700px;
       margin: 0 auto 2rem;
       color: #555;
       font-size: 1.1rem;
     }
 
-    .google-rating {
+    .share-container {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-      gap: 1rem;
-    }
-
-    .google-stars {
-      color: #FBBC05;
-      font-size: 2rem;
-      margin-right: 0.5rem;
-    }
-
-    .rating-text {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #555;
-    }
-
-    .google-badge {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: white;
-      padding: 1rem 2rem;
-      border-radius: 50px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-      width: fit-content;
+      max-width: 1000px;
       margin: 0 auto;
-      transition: transform 0.3s ease;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(179, 0, 0, 0.1);
+      overflow: hidden;
     }
 
-    .google-badge:hover {
-      transform: translateY(-5px);
+    .share-image {
+      flex: 1;
+      position: relative;
     }
 
-    .google-logo {
-      width: 32px;
-      height: 32px;
-      margin-right: 1rem;
+    .share-preview {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .view-reviews {
-      display: inline-block;
-      color: #4285F4;
+    .share-overlay {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(179, 0, 0, 0.8);
+      color: white;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    .share-options {
+      flex: 1;
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .share-text {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .share-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .share-button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 50px;
+      border: none;
       font-weight: 600;
-      text-decoration: none;
-      transition: color 0.3s ease;
-      font-size: 1.1rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .view-reviews:hover {
-      color: #3367D6;
-      text-decoration: underline;
+    .whatsapp-share {
+      background: #25D366;
+      color: white;
+    }
+
+    .facebook-share {
+      background: #3b5998;
+      color: white;
+    }
+
+    .instagram-share {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: white;
+    }
+
+    .pinterest-share {
+      background: #E60023;
+      color: white;
+    }
+
+    .share-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     }
 
     @media (max-width: 768px) {
