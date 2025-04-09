@@ -1771,6 +1771,87 @@
       background: linear-gradient(135deg, #f1e7fe, #d1c4e9);
     }
   </style>
+
+  /* Responsive Design */
+  @media screen and (max-width: 1024px) {
+  .header-container {
+  padding: 0.6rem 1rem;
+  }
+
+  .logo-text {
+  font-size: 1.8rem;
+  }
+
+  .main-nav ul {
+  gap: 1rem;
+  }
+  }
+
+  @media screen and (max-width: 768px) {
+  .header-container {
+  flex-direction: column;
+  padding: 1rem;
+  }
+
+  .logo {
+  margin-bottom: 1rem;
+  }
+
+  .main-nav ul {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  }
+
+  .main-nav .nav-link {
+  font-size: 0.9rem;
+  padding: 0.4rem 0.6rem;
+  }
+
+  .hero-tab {
+  font-size: 0.9rem;
+  padding: 0.4rem 0.6rem;
+  margin-right: 0.8rem;
+  margin-bottom: 0.5rem;
+  }
+
+  .hero-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  }
+  }
+
+  @media screen and (max-width: 480px) {
+  .logo-text {
+  font-size: 1.5rem;
+  }
+
+  .main-nav ul {
+  gap: 0.5rem;
+  }
+
+  .main-nav .nav-link {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.5rem;
+  }
+
+  .hero-tab {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.5rem;
+  margin-right: 0.5rem;
+  }
+
+  .hero-title {
+  font-size: 2rem;
+  }
+
+  .hero-description {
+  font-size: 1rem;
+  padding: 0 1rem;
+  }
+  }
 </head>
 
 <body>
