@@ -185,6 +185,120 @@
   </script>
 
   <style>
+    /* Updated color variables */
+    :root {
+      --primary-light: #ffd6d6;
+      --primary-medium: #ffb3b3;
+      --primary-dark: #ff9999;
+      --accent-light: #fff0db;
+      --accent-medium: #ffe4c4;
+      --accent-dark: #ffd700;
+      --text-dark: #4a4a4a;
+      --text-medium: #666666;
+      --text-light: #888888;
+      --background-light: #fff9f9;
+      --background-medium: #fff5f5;
+    }
+
+    /* Update header styles */
+    .site-header {
+      background: linear-gradient(135deg, #ffd6d6, #fff0db);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Update navigation links */
+    .main-nav .nav-link {
+      color: var(--text-dark);
+    }
+
+    .main-nav .nav-link:hover {
+      color: var(--primary-dark);
+    }
+
+    /* Update hero tabs */
+    .hero-tab {
+      background: linear-gradient(135deg, #ffd6d6, #fff0db);
+      color: var(--text-dark);
+    }
+
+    .hero-tab:hover {
+      background: linear-gradient(135deg, #ffb3b3, #ffe4c4);
+      color: var(--text-dark);
+    }
+
+    /* Update buttons and CTAs */
+    .sacred-cta,
+    .hero-cta,
+    .collection-cta,
+    .showcase-cta {
+      background: linear-gradient(135deg, #ffb3b3, #ff9999);
+      color: var(--text-dark);
+      box-shadow: 0 4px 15px rgba(255, 179, 179, 0.3);
+    }
+
+    .sacred-cta:hover,
+    .hero-cta:hover,
+    .collection-cta:hover,
+    .showcase-cta:hover {
+      background: linear-gradient(135deg, #ff9999, #ffb3b3);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 179, 179, 0.4);
+    }
+
+    /* Update section backgrounds */
+    .sacred-sarees-section,
+    .testimonials-section,
+    .newsletter-section {
+      background: linear-gradient(135deg, #fff9f9, #fff5f5);
+    }
+
+    /* Update accent colors */
+    .accent-line {
+      background: linear-gradient(to right, #ffb3b3, #ffe4c4);
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, #ffb3b3, #ffe4c4);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    /* Update text colors */
+    body {
+      color: var(--text-dark);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--text-dark);
+    }
+
+    p {
+      color: var(--text-medium);
+    }
+
+    /* Update tab buttons */
+    .tab-button {
+      background: white;
+      border: 1px solid rgba(255, 179, 179, 0.3);
+      color: var(--text-dark);
+    }
+
+    .tab-button:hover {
+      background: rgba(255, 179, 179, 0.1);
+      border-color: #ffb3b3;
+    }
+
+    .tab-button.active {
+      background: linear-gradient(135deg, #ffb3b3, #ff9999);
+      color: var(--text-dark);
+    }
+
     .waitlist-section {
       background-color: rgba(179, 0, 0, 0.08);
       padding: 4rem 2rem;
@@ -271,8 +385,8 @@
       top: 0;
       left: 0;
       width: 100%;
-      background: linear-gradient(135deg, #f8d7da, #f1e7fe);
-      box-shadow: 0 2px 10px rgba(139, 0, 0, 0.2);
+      background: linear-gradient(135deg, #ffd6d6, #fff0db);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       z-index: 1000;
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
@@ -317,7 +431,7 @@
     }
 
     .main-nav .nav-link {
-      color: #333;
+      color: var(--text-dark);
       text-decoration: none;
       font-weight: 500;
       font-size: 1rem;
@@ -328,7 +442,7 @@
     }
 
     .main-nav .nav-link:hover {
-      color: #555;
+      color: var(--primary-dark);
     }
 
     .main-nav .nav-link::after {
@@ -559,22 +673,22 @@
 
     .showcase-cta {
       display: inline-block;
-      background: linear-gradient(135deg, #B30000, #8A0000);
-      color: white;
+      background: linear-gradient(135deg, #ffb3b3, #ff9999);
+      color: var(--text-dark);
       padding: 0.8rem 2rem;
       border-radius: 0.5rem;
       text-decoration: none;
       font-weight: 600;
       margin-top: 1rem;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 15px rgba(179, 0, 0, 0.25);
+      box-shadow: 0 4px 15px rgba(255, 179, 179, 0.3);
       position: relative;
       overflow: hidden;
     }
 
     .showcase-cta:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(179, 0, 0, 0.3);
+      box-shadow: 0 6px 20px rgba(255, 179, 179, 0.4);
     }
 
     .showcase-cta::after {
@@ -596,8 +710,8 @@
     /* Collection button styles */
     .collection-cta {
       display: inline-block;
-      background: linear-gradient(135deg, #B30000, #8B0000);
-      color: white;
+      background: linear-gradient(135deg, #ffb3b3, #ff9999);
+      color: var(--text-dark);
       padding: 0.8rem 2rem;
       border-radius: 0.5rem;
       text-decoration: none;
@@ -605,14 +719,14 @@
       margin-top: 1rem;
       margin-left: 1rem;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 15px rgba(179, 0, 0, 0.25);
+      box-shadow: 0 4px 15px rgba(255, 179, 179, 0.3);
       position: relative;
       overflow: hidden;
     }
 
     .collection-cta:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(179, 0, 0, 0.3);
+      box-shadow: 0 6px 20px rgba(255, 179, 179, 0.4);
     }
 
     .collection-cta::after {
@@ -913,7 +1027,7 @@
     }
 
     .highlight {
-      background: linear-gradient(135deg, #B30000, #D4AF37);
+      background: linear-gradient(135deg, #ffb3b3, #ffe4c4);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -922,7 +1036,7 @@
     .accent-line {
       width: 60px;
       height: 3px;
-      background: linear-gradient(to right, #B30000, #D4AF37);
+      background: linear-gradient(to right, #ffb3b3, #ffe4c4);
       margin: 0 auto;
     }
 
@@ -1762,96 +1876,98 @@
       padding: 0.5rem 0.8rem;
       border-radius: 4px;
       transition: all 0.3s ease;
-      background: linear-gradient(135deg, #f8d7da, #f1e7fe);
+      background: linear-gradient(135deg, #ffd6d6, #fff0db);
       margin-right: 1rem;
     }
 
     .hero-tab:hover {
       color: #555;
-      background: linear-gradient(135deg, #f1e7fe, #d1c4e9);
+      background: linear-gradient(135deg, #ffb3b3, #ffe4c4);
     }
   </style>
 
-  /* Responsive Design */
-  @media screen and (max-width: 1024px) {
-  .header-container {
-  padding: 0.6rem 1rem;
-  }
+  <style>
+    /* Responsive Design */
+    @media screen and (max-width: 1024px) {
+      .header-container {
+        padding: 0.6rem 1rem;
+      }
 
-  .logo-text {
-  font-size: 1.8rem;
-  }
+      .logo-text {
+        font-size: 1.8rem;
+      }
 
-  .main-nav ul {
-  gap: 1rem;
-  }
-  }
+      .main-nav ul {
+        gap: 1rem;
+      }
+    }
 
-  @media screen and (max-width: 768px) {
-  .header-container {
-  flex-direction: column;
-  padding: 1rem;
-  }
+    @media screen and (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        padding: 1rem;
+      }
 
-  .logo {
-  margin-bottom: 1rem;
-  }
+      .logo {
+        margin-bottom: 1rem;
+      }
 
-  .main-nav ul {
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.8rem;
-  }
+      .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+      }
 
-  .main-nav .nav-link {
-  font-size: 0.9rem;
-  padding: 0.4rem 0.6rem;
-  }
+      .main-nav .nav-link {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.6rem;
+      }
 
-  .hero-tab {
-  font-size: 0.9rem;
-  padding: 0.4rem 0.6rem;
-  margin-right: 0.8rem;
-  margin-bottom: 0.5rem;
-  }
+      .hero-tab {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.6rem;
+        margin-right: 0.8rem;
+        margin-bottom: 0.5rem;
+      }
 
-  .hero-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.8rem;
-  }
-  }
+      .hero-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+      }
+    }
 
-  @media screen and (max-width: 480px) {
-  .logo-text {
-  font-size: 1.5rem;
-  }
+    @media screen and (max-width: 480px) {
+      .logo-text {
+        font-size: 1.5rem;
+      }
 
-  .main-nav ul {
-  gap: 0.5rem;
-  }
+      .main-nav ul {
+        gap: 0.5rem;
+      }
 
-  .main-nav .nav-link {
-  font-size: 0.85rem;
-  padding: 0.3rem 0.5rem;
-  }
+      .main-nav .nav-link {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.5rem;
+      }
 
-  .hero-tab {
-  font-size: 0.85rem;
-  padding: 0.3rem 0.5rem;
-  margin-right: 0.5rem;
-  }
+      .hero-tab {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.5rem;
+        margin-right: 0.5rem;
+      }
 
-  .hero-title {
-  font-size: 2rem;
-  }
+      .hero-title {
+        font-size: 2rem;
+      }
 
-  .hero-description {
-  font-size: 1rem;
-  padding: 0 1rem;
-  }
-  }
+      .hero-description {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -2228,8 +2344,8 @@
 
     .tab-button {
       background: white;
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      color: #333;
+      border: 1px solid rgba(255, 179, 179, 0.3);
+      color: var(--text-dark);
       padding: 0.8rem 2rem;
       border-radius: 4px;
       font-weight: 500;
@@ -2238,16 +2354,16 @@
     }
 
     .tab-button:hover {
-      background: rgba(212, 175, 55, 0.1);
-      border-color: #D4AF37;
+      background: rgba(255, 179, 179, 0.1);
+      border-color: #ffb3b3;
       transform: translateY(-2px);
     }
 
     .tab-button.active {
-      background: linear-gradient(135deg, #B30000, #8A0000);
-      color: white;
+      background: linear-gradient(135deg, #ffb3b3, #ff9999);
+      color: var(--text-dark);
       border-color: transparent;
-      box-shadow: 0 5px 15px rgba(179, 0, 0, 0.2);
+      box-shadow: 0 5px 15px rgba(255, 179, 179, 0.3);
     }
 
     .tab-content {
@@ -2362,8 +2478,8 @@
 
     .sacred-cta {
       display: inline-block;
-      background: linear-gradient(135deg, #B30000, #8A0000);
-      color: white;
+      background: linear-gradient(135deg, #ffb3b3, #ff9999);
+      color: var(--text-dark);
       text-decoration: none;
       padding: 1rem 2rem;
       border-radius: 4px;
@@ -2374,7 +2490,7 @@
 
     .sacred-cta:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(179, 0, 0, 0.2);
+      box-shadow: 0 6px 20px rgba(255, 179, 179, 0.4);
     }
 
     @media (max-width: 992px) {
