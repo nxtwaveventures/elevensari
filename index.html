@@ -1764,7 +1764,31 @@
 </head>
 
 <body>
-  <!-- Hero Section -->
+  <!-- 1. HEADER - Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgODAwIiBmaWxsPSIjOEIwMDAwIj48cGF0aCBkPSJNNDcxLjIgMTY5LjFjMTguMyAwIDM0LjYgMTMuMSAzNC42IDI5LjIgMCAxNi4xLTE1LjggMjkuMi0zNC42IDI5LjItMTguMyAwLTM0LjYtMTMuMS0zNC42LTI5LjIgMC0xNi4xIDE1LjgtMjkuMiAzNC42LTI5LjJ6Ii8+PHBhdGggZD0iTTQ3MS42IDExMC42bC0yNC4yIDE2Yy0xNCA5LjQtMjMuNCAyNS41LTIzLjQgNDIuNiAwIDE2LjYgOS40IDMyLjMgMjMuNCA0MS43bDI0LjIgMTYuMSAyNC4yLTE2LjFjMTQtOS40IDIzLjQtMjUuNSAyMy40LTQyLjEgMC0xNi42LTkuNC0zMi4zLTIzLjQtNDEuN2wtMjQuMi0xNi41em0wIDIwLjFsMTkuMyAxM2MxMS4yIDcuNSAxOC44IDIwLjUgMTguOCAzMy45IDAgMTMuNS03LjUgMjYuNC0xOC44IDMzLjlsLTE5LjMgMTMtMTkuMy0xM2MtMTEuMi03LjUtMTguOC0yMC41LTE4LjgtMzMuOSAwLTEzLjUgNy41LTI2LjQgMTguOC0zMy45bDE5LjMtMTN6Ii8+PHBhdGggZD0iTTQ2NS4xIDI0OS42czU5LjggNzguMyA3MyAxMTRjMTMuMSAzNiAyMS40IDIyLjkgNDQuOC0xMi42IDIwLjEtMzAuNCA0NS43LTcwLjIgNDUuNy03MC4ySzQ2Ny4yIDMwMC45IDQ2NS4xIDI0OS42eiIvPjxwYXRoIGQ9Ik01NDQgMjYwLjRzLTU2LjEgMzYuOS04Ni45IDY1LjVjLTMwLjggMjguNS03MyA3OS43LTczIDc5LjdzMzYuNS0xNi4xIDc0LjktNTIuMWMzOC4zLTM1LjkgODUuLTkzLjEgODUtOTMuMXpNNTMyLjQgMzY0LjFzLTIzLjkgNTEuNy0zNy44IDk2LjJjLTEzLjggNDQuMS0yMCAxMDIuNi0yMCAxMDIuNnMyMy0zNy44IDQ1LjctODUuOWMyMy4yLTQ3LjYgNTkuNi0xMjYuNSA1OS42LTEyNi41cy00Ny41IDEzLjYtNDcuNSAxMy42eiIvPjxwYXRoIGQ9Ik01NzcuNyA0NjkuN3MtNDEuMy0yMC4xLTc5LjItMjAuMWMtMzcuOCAwLTkxLjQgMTcuNS05MS40IDE3LjVzNjYuNSA0My43IDk3LjMgNDMuN2MzMSAwIDczLjMtNDEuMSA3My4zLTQxLjF6TTY0NS42IDUzMC41cy01NC4zLTIuMy03Mi4zIDYuNmMtMTgsMC00NS4zIDI3LjYtNjkuNSA2OS4xLTI0LjEgNDEuMy03MC45IDE0Mi4zLTcwLjkgMTQyLjNzMzktNTIuNiA2Ni41LTg1LjljMjcuNi0zMy4yIDg3LjYtMTAxLjQgODcuNi0xMDEuNCAwIDAgNTguNi0yMC43IDU4LjYtMzAuN3pNMjYwIDIxNi43di0zOGgtNTQuOXYzOEgxOTB2MjEyLjloMTUuMXYtOTBoNTQuOXY5MGgxNS4xVjIxNi43SDI2MHptLTE1LjEgMTAyaC01NC45di04MGg1NC45djgwek0xMDkuNyAyMTYuN0g4M2wyMTIuOSAyMTIuOWgzOS4yTDEwOS43IDIxNi43em0xNjMuOSAyMTIuOWwxNC0xNEw2OC4yIDIxNi43SDUzLjVsMjIwLjEgMjEyLjl6TTMwOS44IDQzOS45bDQ5IDQ5aDE5LjZsLTYxLjgtNjEuOC0xNDAuNi0xNDBINjkuM2wyNDAuNSAyNDAuNXYtODcuN3pNMzkwLjMgNDg4LjhoMTkuNWw2MS44LTYxLjggNDAuMS00MEgzOTAuM1Y0ODguOXoiLz48cGF0aCBkPSJNMjgyLjkgNDI5LjZoNTQuOXYxMDEuNEgzNTNWNDI5LjZoNTQuOVY0MTRoLTEyNXYxNS42em0yNzYuNSA1OXMtNjYuNS00Ni4yLTgwLTc3LjVjLTEzLjYtMzEuMy0yNC45LTc2LjktMjQuOS03Ni45cy01LjIgNzguMyAxNy4xIDEyNS4xYzIyLjQgNDYuMiA4Ny44IDcxLjEgODcuOCAyOS4zek01MjYuOCA2ODguOWMtMjktMjAtNTAuNC0zOS43LTQ1LjctNjYuNSA0LjctMjYuOCAyMC41LTY5LjEgMjAuNS02OS4xcy0zOC4zIDI4LjUtNTAuNCA2Mi4zYy0xMi4yIDM0LjEtMS45IDU3LjEgMjYuMyA3Ni45IDI4LjIgMTkuNiA4My42IDMxLjggODMuNiAzMS44cy01LjItMTUuNC0zNC4zLTM1LjR6TTY2NS44IDY2MC41aC0zNC42bC05My41LTkzLjVINTIzTDYzMS4yIDY3N2gzNC42ek03MTIuNSA3NzcuMUg3MzJsLTEwLjMtMTAuM0w1NTIuMyA2Mzd2MTUuNWwxNDkuOSAxMjUuMXptLTE2MC4yLTEyNS4xdi0xNS4xTDM1MS42IDQ3N2gtMTkuNmwyMjAuMyAyMjAuM3YtNDUuM3pNMzIyLjkgNjE0LjRoOTcuM3YxNS4xaC05Ny4zeiIvPjwvc3ZnPg=="
+            alt="11Sari Logo" class="logo-image" width="50" height="50">
+          <span class="logo-text">11<span class="logo-highlight">Sari</span></span>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#" class="nav-link">Home</a></li>
+          <li><a href="saree-collection.html" class="nav-link">Collection</a></li>
+          <li><a href="#sacred-collections" class="nav-link">Sacred Sarees</a></li>
+          <li><a href="#featured-section" class="nav-link">Featured</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION - First Impression -->
   <div class="hero-section">
     <div class="hero-content">
       <h1 class="hero-title">
@@ -1780,7 +1804,7 @@
     </div>
   </div>
 
-  <!-- Sacred Sarees Section -->
+  <!-- 3. SACRED SAREES SECTION - Emotional Connection -->
   <div id="sacred-sarees-section" class="sacred-sarees-section">
     <div class="sacred-container">
       <div class="section-header">
@@ -2275,8 +2299,73 @@
     });
   </script>
 
-  <!-- Featured Collection Showcase with direct buy options -->
-  <div id="showcase-section" class="featured-collection-section">
+  <!-- 4. SEO CONTENT SECTION - Educational Journey -->
+  <section id="explore-collections" class="seo-content">
+    <div class="container">
+      <h2>Discover the Finest <span class="highlight-red">Sarees</span> in India</h2>
+
+      <div class="seo-content-grid">
+        <div class="seo-text">
+          <h3>Authentic Banarasi Sarees - A Timeless Tradition</h3>
+          <p>At 11Sari, we bring you the most exquisite collection of authentic Banarasi sarees directly from the looms
+            of Varanasi. Each saree is meticulously handcrafted by master artisans using techniques passed down through
+            generations, ensuring unparalleled quality and authenticity.</p>
+
+          <h3>Premium Silk Sarees for Every Occasion</h3>
+          <p>Our extensive range includes traditional silk sarees, wedding sarees, designer party wear sarees, and
+            contemporary fusion sarees. From opulent Katan silk sarees with intricate zari work to lightweight georgette
+            sarees with modern designs, our collection caters to all preferences and occasions.</p>
+
+          <h3>Why Choose Our Sarees?</h3>
+          <ul class="seo-list">
+            <li><strong>Authentic Craftsmanship:</strong> Directly sourced from skilled weavers of Varanasi</li>
+            <li><strong>Premium Quality:</strong> Finest quality silk and materials that last for generations</li>
+            <li><strong>Exclusive Designs:</strong> Unique patterns and motifs not found elsewhere</li>
+            <li><strong>Ethical Production:</strong> Supporting traditional artisans and sustainable practices</li>
+            <li><strong>Customization:</strong> Bespoke sarees tailored to your preferences</li>
+          </ul>
+        </div>
+
+        <div class="seo-image">
+          <img src="https://source.unsplash.com/random/400x500/?silk,saree,indian" alt="Premium Banarasi Silk Saree"
+            loading="lazy">
+          <div class="seo-image-caption">Handcrafted with traditional techniques and premium materials</div>
+        </div>
+      </div>
+
+      <div class="seo-categories">
+        <h3>Explore Our Saree Collections</h3>
+        <div class="category-grid">
+          <div class="category-card">
+            <h4>Wedding Sarees</h4>
+            <p>Opulent Banarasi silk sarees with rich gold and silver zari work, perfect for bridal occasions.</p>
+            <a href="wedding-sarees.html" class="category-link">View Collection</a>
+          </div>
+
+          <div class="category-card">
+            <h4>Designer Sarees</h4>
+            <p>Contemporary designer sarees with innovative patterns, embellishments, and modern aesthetics.</p>
+            <a href="designer-sarees.html" class="category-link">View Collection</a>
+          </div>
+
+          <div class="category-card">
+            <h4>Handloom Sarees</h4>
+            <p>Traditional handloom sarees showcasing authentic weaving techniques from across India.</p>
+            <a href="handloom-sarees.html" class="category-link">View Collection</a>
+          </div>
+
+          <div class="category-card">
+            <h4>Festive Sarees</h4>
+            <p>Vibrant and elegant sarees perfect for festivals, celebrations, and special occasions.</p>
+            <a href="festive-sarees.html" class="category-link">View Collection</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FEATURED COLLECTION - Visual Showcase -->
+  <div id="featured-section" class="featured-collection-section">
     <div class="featured-container">
       <div class="section-header">
         <span class="featured-subtitle">EXCLUSIVE COLLECTION</span>
@@ -2691,362 +2780,8 @@
     }
   </style>
 
-  <div id="iz29ek" class="gjs-grid-row waitlist-section">
-    <div id="ik2rdi" class="gjs-grid-column waitlist-content">
-      <h2 id="i83vu9" class="gjs-heading waitlist-title"><strong data-start="173" data-end="214">Join Our Waitlist & Win
-          a Free Saree!</strong></h2>
-      <div id="in201n" class="text-main-content waitlist-description">
-        <p data-start="220" data-end="378" style="margin-bottom: 1.5rem;">Be among the <strong data-start="233"
-            data-end="254" style="color: #B30000;">top 5 subscribers</strong> and receive an exclusive saree gift! Stay
-          updated with the latest trends, celebrity saree styles, and traditional weaves.</p>
-        <div class="benefits-box">
-          <p data-start="380" data-end="516" id="ibney8" style="margin: 0;">
-            <span class="benefit-item">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                style="margin-right: 0.5rem; min-width: 24px;">
-                <circle cx="12" cy="12" r="10" fill="#4CAF50" fill-opacity="0.1" stroke="#4CAF50" stroke-width="2" />
-                <path d="M8 12L11 15L16 9" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-              <span style="color: #333;">Get early access to premium saree insights</span>
-            </span>
-            <span class="benefit-item">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                style="margin-right: 0.5rem; min-width: 24px;">
-                <circle cx="12" cy="12" r="10" fill="#4CAF50" fill-opacity="0.1" stroke="#4CAF50" stroke-width="2" />
-                <path d="M8 12L11 15L16 9" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-              <span style="color: #333;">Exclusive deals and offers for members</span>
-            </span>
-            <span class="benefit-item">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                style="margin-right: 0.5rem; min-width: 24px;">
-                <circle cx="12" cy="12" r="10" fill="#4CAF50" fill-opacity="0.1" stroke="#4CAF50" stroke-width="2" />
-                <path d="M8 12L11 15L16 9" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-              <span style="color: #333;">Be the first to know about new collections</span>
-            </span>
-          </p>
-        </div>
-      </div>
-      <a id="iwgwt5" class="gjs-button waitlist-button" onclick="openWaitlistModal()">Join Waitlist</a>
-    </div>
-  </div>
-
-  <!-- Waitlist Modal -->
-  <div id="waitlistModal"
-    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 1000; justify-content: center; align-items: center; backdrop-filter: blur(5px);">
-    <div
-      style="background: linear-gradient(135deg, #fff, #faf7f2); width: 90%; max-width: 500px; border-radius: 1rem; padding: 2.5rem; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(212, 175, 55, 0.3); position: relative; overflow: hidden;">
-      <div
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 6px; background: linear-gradient(to right, #B30000, #D4AF37);">
-      </div>
-      <div
-        style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, rgba(255, 255, 255, 0) 70%); border-radius: 0 0 0 100%;">
-      </div>
-      <div
-        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
-        <h3
-          style="margin: 0; color: #B30000; font-size: 1.5rem; font-family: 'Playfair Display', serif; font-weight: 600;">
-          Join Our Exclusive Waitlist</h3>
-        <button onclick="closeWaitlistModal()" class="close-btn"
-          style="background: none; border: none; font-size: 1.8rem; cursor: pointer; color: #666; transition: color 0.2s ease, transform 0.2s ease; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 50%; position: relative;">&times;</button>
-      </div>
-      <form id="waitlistForm" style="margin-top: 1rem;">
-        <div style="margin-bottom: 1.5rem;">
-          <label for="waitlistName" style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: #333;">Full
-            Name</label>
-          <input type="text" id="waitlistName" name="waitlistName" required
-            style="width: 100%; padding: 0.85rem; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 0.5rem; font-family: 'Inter', sans-serif; background-color: rgba(255, 255, 255, 0.9); transition: border-color 0.3s ease, box-shadow 0.3s ease;">
-        </div>
-        <div style="margin-bottom: 1.5rem;">
-          <label for="waitlistEmail" style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: #333;">Email
-            Address</label>
-          <input type="email" id="waitlistEmail" name="waitlistEmail" required
-            style="width: 100%; padding: 0.85rem; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 0.5rem; font-family: 'Inter', sans-serif; background-color: rgba(255, 255, 255, 0.9); transition: border-color 0.3s ease, box-shadow 0.3s ease;">
-        </div>
-        <div style="margin-bottom: 1.5rem;">
-          <label for="waitlistPhone" style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: #333;">Phone
-            Number</label>
-          <input type="tel" id="waitlistPhone" name="waitlistPhone" required
-            style="width: 100%; padding: 0.85rem; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 0.5rem; font-family: 'Inter', sans-serif; background-color: rgba(255, 255, 255, 0.9); transition: border-color 0.3s ease, box-shadow 0.3s ease;">
-        </div>
-        <div style="margin-bottom: 1.8rem;">
-          <label style="display: block; margin-bottom: 0.8rem; font-weight: 500; color: #333;">Interests</label>
-          <div style="display: flex; flex-wrap: wrap; gap: 0.8rem;">
-            <label
-              style="display: flex; align-items: center; cursor: pointer; margin-right: 1rem; color: #555; transition: color 0.2s ease;">
-              <input type="checkbox" name="interests" value="silk" style="margin-right: 0.5rem; accent-color: #B30000;">
-              <span>Silk Sarees</span>
-            </label>
-            <label
-              style="display: flex; align-items: center; cursor: pointer; margin-right: 1rem; color: #555; transition: color 0.2s ease;">
-              <input type="checkbox" name="interests" value="cotton"
-                style="margin-right: 0.5rem; accent-color: #B30000;">
-              <span>Cotton Sarees</span>
-            </label>
-            <label
-              style="display: flex; align-items: center; cursor: pointer; margin-right: 1rem; color: #555; transition: color 0.2s ease;">
-              <input type="checkbox" name="interests" value="wedding"
-                style="margin-right: 0.5rem; accent-color: #B30000;">
-              <span>Bridal Collection</span>
-            </label>
-            <label
-              style="display: flex; align-items: center; cursor: pointer; color: #555; transition: color 0.2s ease;">
-              <input type="checkbox" name="interests" value="trends"
-                style="margin-right: 0.5rem; accent-color: #B30000;">
-              <span>Fashion Trends</span>
-            </label>
-          </div>
-        </div>
-        <button type="submit"
-          style="background: linear-gradient(135deg, #B30000, #8A0000); color: white; border: none; padding: 1rem 1.5rem; border-radius: 0.5rem; font-weight: 600; cursor: pointer; width: 100%; font-size: 1.1rem; margin-top: 1.5rem; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 4px 15px rgba(179, 0, 0, 0.25); position: relative; overflow: hidden;">
-          <span style="position: relative; z-index: 2;">Subscribe Now</span>
-          <span
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #D4AF37, rgba(212, 175, 55, 0.7)); opacity: 0; transition: opacity 0.3s ease; z-index: 1;"></span>
-        </button>
-        <div style="margin-top: 1.2rem; font-size: 0.85rem; color: #777; text-align: center; line-height: 1.4;">
-          By joining, you agree to receive email updates. We respect your privacy and will never share your information.
-        </div>
-      </form>
-      <div style="position: absolute; bottom: 15px; right: 15px; opacity: 0.1;">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-            stroke="#B30000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M12 16V12" stroke="#B30000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M12 8H12.01" stroke="#B30000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </div>
-    </div>
-  </div>
-
-  <!-- Success Modal -->
-  <div id="successModal"
-    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 1000; justify-content: center; align-items: center; backdrop-filter: blur(5px);">
-    <div
-      style="background: linear-gradient(135deg, #fff, #faf7f2); width: 90%; max-width: 500px; border-radius: 1rem; padding: 3rem 2.5rem; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(212, 175, 55, 0.3); position: relative; text-align: center; overflow: hidden;">
-      <div
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 6px; background: linear-gradient(to right, #B30000, #D4AF37);">
-      </div>
-      <button onclick="closeSuccessModal()" class="close-btn"
-        style="background: none; border: none; font-size: 1.8rem; cursor: pointer; color: #666; transition: color 0.2s ease, transform 0.2s ease; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 50%; position: absolute; top: 15px; right: 15px; z-index: 10;">&times;</button>
-      <div
-        style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, rgba(255, 255, 255, 0) 70%); border-radius: 0 0 0 100%; transform: rotate(45deg);">
-      </div>
-      <div style="margin-bottom: 1rem; position: relative;">
-        <div style="position: relative; width: 120px; height: 120px; margin: 0 auto 1.5rem;">
-          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="60" cy="60" r="58" stroke="url(#paint0_linear)" stroke-width="4" />
-            <path d="M40 60L55 75L80 50" stroke="url(#paint1_linear)" stroke-width="6" stroke-linecap="round"
-              stroke-linejoin="round" />
-            <defs>
-              <linearGradient id="paint0_linear" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#B30000" />
-                <stop offset="1" stop-color="#D4AF37" />
-              </linearGradient>
-              <linearGradient id="paint1_linear" x1="40" y1="50" x2="80" y2="75" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#B30000" />
-                <stop offset="1" stop-color="#D4AF37" />
-              </linearGradient>
-            </defs>
-          </svg>
-          <div
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(255, 255, 255, 0) 70%); border-radius: 50%; animation: pulse 2s infinite;">
-          </div>
-        </div>
-        <h3
-          style="margin: 0; background: linear-gradient(135deg, #B30000, #D4AF37); -webkit-background-clip: text; background-clip: text; color: transparent; font-size: 2rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-weight: 700;">
-          Thank You!</h3>
-        <p style="color: #555; margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.5;">Your submission has been
-          received. You're now on our exclusive waitlist for early access!</p>
-        <div
-          style="background: rgba(179, 0, 0, 0.05); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1.5rem; border: 1px dashed rgba(179, 0, 0, 0.2);">
-          <p style="color: #B30000; font-weight: 600; margin: 0; font-size: 1.1rem;">Check your email for a special
-            welcome gift</p>
-        </div>
-        <button onclick="closeSuccessModal()"
-          style="background: linear-gradient(135deg, #B30000, #8A0000); color: white; border: none; padding: 0.85rem 2rem; border-radius: 0.5rem; font-weight: 600; cursor: pointer; font-size: 1.1rem; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 4px 15px rgba(179, 0, 0, 0.25);">Close</button>
-      </div>
-      <div style="position: absolute; bottom: 15px; left: 15px; opacity: 0.1;">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-            stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" />
-          <path d="M9 9H9.01" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M15 9H15.01" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // Waitlist Modal Functionality
-    document.addEventListener('DOMContentLoaded', function () {
-      const waitlistModal = document.getElementById('waitlistModal');
-      const successModal = document.getElementById('successModal');
-      const waitlistForm = document.getElementById('waitlistForm');
-      const formInputs = waitlistForm.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"]');
-      const waitlistButton = document.getElementById('iwgwt5');
-
-      // Ensure close buttons work by adding direct event listeners
-      document.querySelector('#waitlistModal .close-btn').addEventListener('click', function () {
-        closeWaitlistModal();
-      });
-
-      document.querySelector('#successModal .close-btn').addEventListener('click', function () {
-        closeSuccessModal();
-      });
-
-      // Add focus styles to form inputs
-      formInputs.forEach(input => {
-        input.addEventListener('focus', function () {
-          this.style.borderColor = '#D4AF37';
-          this.style.boxShadow = '0 0 0 3px rgba(212, 175, 55, 0.2)';
-        });
-
-        input.addEventListener('blur', function () {
-          this.style.borderColor = 'rgba(212, 175, 55, 0.3)';
-          this.style.boxShadow = 'none';
-        });
-      });
-
-      // Add hover effect to the waitlist button
-      waitlistButton.addEventListener('mouseenter', function () {
-        this.style.transform = 'translateY(-3px)';
-        this.style.boxShadow = '0 12px 30px rgba(179, 0, 0, 0.3)';
-      });
-
-      waitlistButton.addEventListener('mouseleave', function () {
-        this.style.transform = 'translateY(0)';
-        this.style.boxShadow = '0 8px 25px rgba(179, 0, 0, 0.25)';
-      });
-
-      // Add hover effect to submit button
-      const submitButton = waitlistForm.querySelector('button[type="submit"]');
-      submitButton.addEventListener('mouseenter', function () {
-        this.style.transform = 'translateY(-2px)';
-        this.style.boxShadow = '0 6px 20px rgba(179, 0, 0, 0.3)';
-        this.querySelector('span:last-child').style.opacity = '0.2';
-      });
-
-      submitButton.addEventListener('mouseleave', function () {
-        this.style.transform = 'translateY(0)';
-        this.style.boxShadow = '0 4px 15px rgba(179, 0, 0, 0.25)';
-        this.querySelector('span:last-child').style.opacity = '0';
-      });
-
-      // Close button hover effect
-      const closeButtons = document.querySelectorAll('[onclick^="close"]');
-      closeButtons.forEach(button => {
-        button.addEventListener('mouseenter', function () {
-          this.style.color = '#B30000';
-          this.style.transform = 'scale(1.1)';
-          this.style.backgroundColor = 'rgba(179, 0, 0, 0.05)';
-        });
-
-        button.addEventListener('mouseleave', function () {
-          this.style.color = '#666';
-          this.style.transform = 'scale(1)';
-          this.style.backgroundColor = 'transparent';
-        });
-
-        // Add active/pressed state
-        button.addEventListener('mousedown', function () {
-          this.style.transform = 'scale(0.95)';
-        });
-
-        button.addEventListener('mouseup', function () {
-          this.style.transform = 'scale(1.1)';
-        });
-      });
-
-      function openWaitlistModal() {
-        waitlistModal.style.display = 'flex';
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
-
-        // Animation effect
-        const modalContent = waitlistModal.querySelector('div');
-        modalContent.style.opacity = '0';
-        modalContent.style.transform = 'scale(0.9)';
-        modalContent.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-
-        setTimeout(() => {
-          modalContent.style.opacity = '1';
-          modalContent.style.transform = 'scale(1)';
-        }, 50);
-      }
-
-      function closeWaitlistModal() {
-        const modalContent = waitlistModal.querySelector('div');
-        modalContent.style.opacity = '0';
-        modalContent.style.transform = 'scale(0.9)';
-
-        setTimeout(() => {
-          waitlistModal.style.display = 'none';
-          document.body.style.overflow = 'auto'; // Restore scrolling
-          waitlistForm.reset();
-        }, 300);
-      }
-
-      function closeSuccessModal() {
-        const modalContent = successModal.querySelector('div');
-        modalContent.style.opacity = '0';
-        modalContent.style.transform = 'scale(0.9)';
-        modalContent.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-
-        setTimeout(() => {
-          successModal.style.display = 'none';
-          document.body.style.overflow = 'auto'; // Restore scrolling
-        }, 300);
-      }
-
-      // Handle form submission
-      waitlistForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        // Here you would normally send the form data to your server
-        // For this demo, we'll just show the success message
-
-        // Close waitlist modal and show success modal
-        closeWaitlistModal();
-
-        setTimeout(() => {
-          successModal.style.display = 'flex';
-          const successContent = successModal.querySelector('div');
-          successContent.style.opacity = '0';
-          successContent.style.transform = 'scale(0.9)';
-
-          setTimeout(() => {
-            successContent.style.opacity = '1';
-            successContent.style.transform = 'scale(1)';
-          }, 50);
-        }, 350);
-
-        // Store submission in localStorage to remember the user
-        localStorage.setItem('waitlistSubmitted', 'true');
-        localStorage.setItem('waitlistEmail', document.getElementById('waitlistEmail').value);
-      });
-
-      // Check if user has already joined waitlist
-      if (localStorage.getItem('waitlistSubmitted') === 'true') {
-        waitlistButton.textContent = 'Already Joined ✓';
-        waitlistButton.style.background = 'linear-gradient(135deg, #4CAF50, #3D9140)';
-        waitlistButton.style.boxShadow = '0 8px 25px rgba(76, 175, 80, 0.25)';
-      }
-
-      // Make the global functions accessible
-      window.openWaitlistModal = openWaitlistModal;
-      window.closeWaitlistModal = closeWaitlistModal;
-      window.closeSuccessModal = closeSuccessModal;
-    });
-  </script>
-
-  <div id="iubhud" class="gjs-grid-row testimonial-section">
+  <!-- 6. TESTIMONIALS - Trust Building -->
+  <div id="testimonials" class="gjs-grid-row testimonial-section">
     <div id="i0qnx4" class="gjs-grid-column">
       <h3 id="testim-title" class="gjs-heading testimonial-title">What Our <span class="gold-accent">Customers</span>
         Say</h3>
@@ -3506,7 +3241,7 @@
     });
   </script>
 
-  <!-- Blog Preview Section -->
+  <!-- 7. BLOG PREVIEW - Knowledge Sharing -->
   <div class="blog-preview-section">
     <div class="blog-preview-container">
       <div class="section-header">
@@ -3575,329 +3310,7 @@
   </div>
   <!-- End Blog Preview Section -->
 
-  <!-- FAQ Section -->
-  <div class="faq-section">
-    <div class="faq-container">
-      <div class="section-header">
-        <span class="section-subtitle">COMMON QUESTIONS</span>
-        <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
-        <div class="accent-line"></div>
-        <p class="section-description">Find answers to the most common questions about our sarees, ordering process, and
-          shipping policies.</p>
-      </div>
-
-      <div class="faq-wrapper">
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>What makes Banarasi silk sarees special?</h3>
-            <button class="toggle-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 12H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M12 18V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </button>
-          </div>
-          <div class="faq-answer">
-            <p>Banarasi silk sarees are renowned for their gold and silver zari work, intricate designs, and dense silk
-              weave. The designs often feature traditional motifs like floral patterns, paisleys, and intricate borders.
-              Each saree takes anywhere from 15 days to 6 months to create by skilled artisans who have inherited this
-              craft through generations.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>How do I care for my silk saree?</h3>
-            <button class="toggle-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 12H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M12 18V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </button>
-          </div>
-          <div class="faq-answer">
-            <p>We recommend dry cleaning for your precious silk sarees. If hand washing is necessary, use cold water
-              with a mild detergent designed for silk. Never wring the saree; instead, gently squeeze out excess water
-              and roll it in a towel. Air dry in shade and store in a cotton or muslin cloth, away from direct sunlight.
-              Store with silica gel packets to prevent moisture damage.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>Do you ship internationally?</h3>
-            <button class="toggle-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 12H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M12 18V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </button>
-          </div>
-          <div class="faq-answer">
-            <p>Yes, we offer worldwide shipping. International orders typically take 7-14 business days to arrive,
-              depending on your location. We use trusted courier services with tracking capabilities to ensure your
-              precious sarees reach you safely. Please note that customs duties and taxes are the responsibility of the
-              recipient.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>What is your return policy?</h3>
-            <button class="toggle-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 12H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M12 18V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </button>
-          </div>
-          <div class="faq-answer">
-            <p>We accept returns within 7 days of delivery for unworn items in their original packaging with tags
-              attached. Please note that custom-made or personalized sarees cannot be returned unless there is a
-              manufacturing defect. Contact our customer service team to initiate a return process.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>Are your sarees authentic handloom products?</h3>
-            <button class="toggle-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 12H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M12 18V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </button>
-          </div>
-          <div class="faq-answer">
-            <p>Absolutely. Every saree in our collection is handwoven by master artisans from Varanasi. We source
-              directly from the weavers' communities and ensure fair trade practices. Each saree comes with a
-              certificate of authenticity detailing the weaving technique, materials used, and the artisan's
-              information.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End FAQ Section -->
-
-  <!-- FAQ Structured Data for SEO -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What makes Banarasi silk sarees special?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Banarasi silk sarees are renowned for their gold and silver zari work, intricate designs, and dense silk weave. The designs often feature traditional motifs like floral patterns, paisleys, and intricate borders. Each saree takes anywhere from 15 days to 6 months to create by skilled artisans who have inherited this craft through generations."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I care for my silk saree?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We recommend dry cleaning for your precious silk sarees. If hand washing is necessary, use cold water with a mild detergent designed for silk. Never wring the saree; instead, gently squeeze out excess water and roll it in a towel. Air dry in shade and store in a cotton or muslin cloth, away from direct sunlight. Store with silica gel packets to prevent moisture damage."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you ship internationally?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, we offer worldwide shipping. International orders typically take 7-14 business days to arrive, depending on your location. We use trusted courier services with tracking capabilities to ensure your precious sarees reach you safely. Please note that customs duties and taxes are the responsibility of the recipient."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is your return policy?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We accept returns within 7 days of delivery for unworn items in their original packaging with tags attached. Please note that custom-made or personalized sarees cannot be returned unless there is a manufacturing defect. Contact our customer service team to initiate a return process."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are your sarees authentic handloom products?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely. Every saree in our collection is handwoven by master artisans from Varanasi. We source directly from the weavers' communities and ensure fair trade practices. Each saree comes with a certificate of authenticity detailing the weaving technique, materials used, and the artisan's information."
-          }
-        }
-      ]
-    }
-  </script>
-
-  <style>
-    /* FAQ Section Styles */
-    .faq-section {
-      padding: 6rem 0;
-      background: linear-gradient(135deg, #fff, #fcf9f6);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .faq-container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      position: relative;
-      z-index: 2;
-    }
-
-    .faq-wrapper {
-      margin-top: 3rem;
-    }
-
-    .faq-item {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-      margin-bottom: 1.5rem;
-      overflow: hidden;
-      border: 1px solid rgba(212, 175, 55, 0.1);
-      transition: all 0.3s ease;
-    }
-
-    .faq-item:hover {
-      border-color: rgba(179, 0, 0, 0.2);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .faq-question {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem 2rem;
-      cursor: pointer;
-      background: white;
-      transition: all 0.3s ease;
-    }
-
-    .faq-question h3 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin: 0;
-      color: #333;
-    }
-
-    .toggle-icon {
-      background: transparent;
-      border: none;
-      width: 24px;
-      height: 24px;
-      color: #B30000;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-      flex-shrink: 0;
-      margin-left: 1rem;
-      padding: 0;
-    }
-
-    .faq-item.active .toggle-icon {
-      transform: rotate(45deg);
-    }
-
-    .faq-answer {
-      padding: 0 2rem;
-      max-height: 0;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      opacity: 0;
-    }
-
-    .faq-item.active .faq-answer {
-      padding: 0 2rem 1.5rem;
-      max-height: 500px;
-      opacity: 1;
-    }
-
-    .faq-answer p {
-      margin: 0;
-      color: #555;
-      line-height: 1.6;
-      font-size: 1rem;
-    }
-
-    @media (max-width: 768px) {
-      .faq-section {
-        padding: 4rem 0;
-      }
-
-      .faq-question {
-        padding: 1.2rem 1.5rem;
-      }
-
-      .faq-question h3 {
-        font-size: 1.1rem;
-      }
-
-      .faq-item.active .faq-answer {
-        padding: 0 1.5rem 1.2rem;
-      }
-    }
-  </style>
-
-  <script>
-    // FAQ Functionality
-    document.addEventListener('DOMContentLoaded', function () {
-      const faqItems = document.querySelectorAll('.faq-item');
-
-      faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-
-        question.addEventListener('click', () => {
-          // Toggle active class on clicked item
-          item.classList.toggle('active');
-
-          // Close other items
-          faqItems.forEach(otherItem => {
-            if (otherItem !== item) {
-              otherItem.classList.remove('active');
-            }
-          });
-        });
-      });
-
-      // Open first FAQ item by default
-      if (faqItems.length > 0) {
-        faqItems[0].classList.add('active');
-      }
-    });
-  </script>
-
-  <!-- Google Reviews Section -->
-  <div class="google-reviews">
-    <div class="container">
-      <h2>Our Google Reviews</h2>
-      <p>Join hundreds of satisfied customers who love our authentic Banarasi sarees.</p>
-      <div class="google-rating">
-        <div class="google-stars">★★★★★</div>
-        <div class="rating-text">4.9 out of 5 based on 45+ reviews</div>
-      </div>
-      <div class="google-badge">
-        <img
-          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCI+PHBhdGggZmlsbD0iI0ZGQzEwNyIgZD0iTTQzLjYxMTIwMDUsMjAuMDgzMDAyN0g0MlYyMEgyNHY4aDExLjMwMzAwMWMtMS42NDk5OTk2LDQuNjU3MDAwNy02LjA4MDAwMSw4LTExLjMwMzAwMSw4Yy02LjYyNzAwMDgsMC0xMi01LjM3MzAwMDgtMTItMTJjMC02LjYyNzAwMDgsNS4zNzI5OTkyLTEyLDEyLTEyYzMuMDUzOTk5NSwwLDUuODM3MDAwMywxLjE0NDAwMDUsNy45NjEwMDA0LDMuMDM5MDAxNUw0MC40ODgyLDkuMDYxOTk5NkMzNi42NTgxOTk3LDUuNTA2MDAwNSwzMC41NiwzLDI0LDNDMTIuOTU0MDAwNSwzLDQsMTEuOTUzOTk5NSw0LDIzcy04Ljk1NDAwMDUsMjAsMjAsMjBjMTEuMDQ1OTk5LDAsMjAtOC45NTQ5OTU3LDIwLTIwQzQ0LDIyLjE3MDk5NjcuODU4MDAxNywyMS4wMjU5OTcyLDQzLjYxMTIwMDUsMjAuMDgzMDAyN3oiLz48cGF0aCBmaWxsPSIjRkYzRDAwIiBkPSJNNi4zMDYwMDI2LDE0LjY5MTAwMTlMMTAuNzI5NDM0OCwxOC4wMTA0MTU2QzEyLjI3NjU5OTksMTQuOTA5MjA0MSAxNS44Nzc5OTk4LDEzLDIwLDEzQzIzLjA1Mzk5OTUsMTMsMjUuODM3MDAwMywxNC4xNDQwMDA1LDI3Ljk2MTAwMDQsMTYuMDM5MDAxNUwzMy40ODgyLDEwLjA2MTk5OTZDMjkuNjU4MTk5Nyw2LjUwNjAwMDUsMjMuNTYsNCwxNyw0QzEwLjkyNUE3Niw0LDUuNTY3OTk5LDguNDg2OTcyMyw2LjMwNjAwMjYsMTQuNjkxMDAxOXoiLz48cGF0aCBmaWxsPSIjNENBRjUwIiBkPSJNNjAsMjBjMC0zLjMxMTk5OTUtMC44MzM5OTk2LTYuNDEwMDAzNy0yLjI4ODk5NTctOS4xMDg5OTc4Yy0wLjAzNDIxNjYtMC4wNjQ0ODMxLTAuMDcwMzg1MSDMC4xMjg0MTIzLTAuMDk5NjA5NC0wLjE5NDMzNkw1NC4yNjMwMDM1LDEyLjkzMTk5MTYiLz48cGF0aCBmaWxsPSIjMTk3NkQyIiBkPSJNNDMuNjExMjAwNSwyMC4wODMwMDI3SDQyVjIwSDI0djhoMTEuMzAzMDAxYy0wLjc5MjAwMDgsMi4yMzY5OTk1LTIuMTI0MDAxLDQuMTY1OTk5NS0zLjgzMjAwMDcsNS41NzE5OTkxbDUuODgzNjQ5OCw0LjU4NDg0NDRDUDY3MDIxMTcsMzQuMDQ2OTc3NyA0NC41NLDMwLjA3MzAwMDMsNDQsMjZjMC0xLjk4ODAwMDktMC4zNTE5OTk4LTMuODk2OTk5OS0wLjk4NzE4NDEtNS42ODAwMDkxQzQzLjY5MDMwMTUsMjAuMjExOTk5LDQzLjY1MDM0MzMsMjAuMTQ3OTk1NiA0My42MTEyMDA1LDIwLjA4MzAwMjd6Ii8+PHBhdGggZmlsbD0iI0ZGQzEwNyIgZD0iTTI0LDQ0YzYuNTYsNDQsMTIuNjU4MTk5Nyw0MS40OTM5OTk1LDE2LjQ4ODM0MjMsMzcuOTM4MDAzNEwzNi40NzEwMDQ1LDMzLjM3MTAxLTVDMzMuMTQ2MDAzNywzNi45NDA4MTIzIDI4LjcwMzYvNDgsMjQsNDR6Ii8+PHBhdGggZmlsbD0iI0REMTEZGC47D48ZGIgGZpbGw9IiM0Q0FGNTA0IiBkPSJNMjQsNDRjMTEuMDQ1OTk5LDAsMjAtOC45NTQ5OTU3LDIwLTIwYzAtMS45MzA5OTc4LTAuMjgxMDAxLTMuNzk4MDkwMy0wLjc5MjOTk3NC01LjU1MDk5NDlsLTYuNjk1MDAxOSw1LjE3Mj99NTYyQzM3LjI4NTAwMDcsNDIuOTM4NjQ0NCwzMS4xNTM2NDI3LDQ0LDI0LDQ0eiIvPjwvc3ZnPg=="
-          alt="Google" class="google-logo">
-        <a href="https://g.co/kgs/BJzV3Hd" target="_blank" class="view-reviews">Read our reviews on Google</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Social Sharing Section -->
+  <!-- 8. SOCIAL SHARING - Community Building -->
   <div class="social-share-section">
     <div class="container">
       <h2>Share the <span class="highlight-red">Magic</span> of Banarasi Sarees</h2>
@@ -4091,39 +3504,123 @@
     // Add any additional JS here
   </script>
 
-  <!-- WhatsApp Chat Button -->
-  <a href="https://wa.me/919663495817" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
-    <div class="whatsapp-tooltip">Chat with us on WhatsApp</div>
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-      <path
-        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
-    </svg>
-  </a>
-
-  <!-- Site Header -->
-  <header class="site-header">
-    <div class="header-container">
-      <div class="logo">
-        <a href="index.html">
-          <img
-            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgODAwIiBmaWxsPSIjOEIwMDAwIj48cGF0aCBkPSJNNDcxLjIgMTY5LjFjMTguMyAwIDM0LjYgMTMuMSAzNC42IDI5LjIgMCAxNi4xLTE1LjggMjkuMi0zNC42IDI5LjItMTguMyAwLTM0LjYtMTMuMS0zNC42LTI5LjIgMC0xNi4xIDE1LjgtMjkuMiAzNC42LTI5LjJ6Ii8+PHBhdGggZD0iTTQ3MS42IDExMC42bC0yNC4yIDE2Yy0xNCA5LjQtMjMuNCAyNS41LTIzLjQgNDIuNiAwIDE2LjYgOS40IDMyLjMgMjMuNCA0MS43bDI0LjIgMTYuMSAyNC4yLTE2LjFjMTQtOS40IDIzLjQtMjUuNSAyMy40LTQyLjEgMC0xNi42LTkuNC0zMi4zLTIzLjQtNDEuN2wtMjQuMi0xNi41em0wIDIwLjFsMTkuMyAxM2MxMS4yIDcuNSAxOC44IDIwLjUgMTguOCAzMy45IDAgMTMuNS03LjUgMjYuNC0xOC44IDMzLjlsLTE5LjMgMTMtMTkuMy0xM2MtMTEuMi03LjUtMTguOC0yMC41LTE4LjgtMzMuOSAwLTEzLjUgNy41LTI2LjQgMTguOC0zMy45bDE5LjMtMTN6Ii8+PHBhdGggZD0iTTQ2NS4xIDI0OS42czU5LjggNzguMyA3MyAxMTRjMTMuMSAzNiAyMS40IDIyLjkgNDQuOC0xMi42IDIwLjEtMzAuNCA0NS43LTcwLjIgNDUuNy03MC4ySzQ2Ny4yIDMwMC45IDQ2NS4xIDI0OS42eiIvPjxwYXRoIGQ9Ik01NDQgMjYwLjRzLTU2LjEgMzYuOS04Ni45IDY1LjVjLTMwLjggMjguNS03MyA3OS43LTczIDc5LjdzMzYuNS0xNi4xIDc0LjktNTIuMWMzOC4zLTM1LjkgODUuLTkzLjEgODUtOTMuMXpNNTMyLjQgMzY0LjFzLTIzLjkgNTEuNy0zNy44IDk2LjJjLTEzLjggNDQuMS0yMCAxMDIuNi0yMCAxMDIuNnMyMy0zNy44IDQ1LjctODUuOWMyMy4yLTQ3LjYgNTkuNi0xMjYuNSA1OS42LTEyNi41cy00Ny41IDEzLjYtNDcuNSAxMy42eiIvPjxwYXRoIGQ9Ik01NzcuNyA0NjkuN3MtNDEuMy0yMC4xLTc5LjItMjAuMWMtMzcuOCAwLTkxLjQgMTcuNS05MS40IDE3LjVzNjYuNSA0My43IDk3LjMgNDMuN2MzMSAwIDczLjMtNDEuMSA3My4zLTQxLjF6TTY0NS42IDUzMC41cy01NC4zLTIuMy03Mi4zIDYuNmMtMTgsMC00NS4zIDI3LjYtNjkuNSA2OS4xLTI0LjEgNDEuMy03MC45IDE0Mi4zLTcwLjkgMTQyLjNzMzktNTIuNiA2Ni41LTg1LjljMjcuNi0zMy4yIDg3LjYtMTAxLjQgODcuNi0xMDEuNCAwIDAgNTguNi0yMC43IDU4LjYtMzAuN3pNMjYwIDIxNi43di0zOGgtNTQuOXYzOEgxOTB2MjEyLjloMTUuMXYtOTBoNTQuOXY5MGgxNS4xVjIxNi43SDI2MHptLTE1LjEgMTAyaC01NC45di04MGg1NC45djgwek0xMDkuNyAyMTYuN0g4M2wyMTIuOSAyMTIuOWgzOS4yTDEwOS43IDIxNi43em0xNjMuOSAyMTIuOWwxNC0xNEw2OC4yIDIxNi43SDUzLjVsMjIwLjEgMjEyLjl6TTMwOS44IDQzOS45bDQ5IDQ5aDE5LjZsLTYxLjgtNjEuOC0xNDAuNi0xNDBINjkuM2wyNDAuNSAyNDAuNXYtODcuN3pNMzkwLjMgNDg4LjhoMTkuNWw2MS44LTYxLjggNDAuMS00MEgzOTAuM1Y0ODguOXoiLz48cGF0aCBkPSJNMjgyLjkgNDI5LjZoNTQuOXYxMDEuNEgzNTNWNDI5LjZoNTQuOVY0MTRoLTEyNXYxNS42em0yNzYuNSA1OXMtNjYuNS00Ni4yLTgwLTc3LjVjLTEzLjYtMzEuMy0yNC45LTc2LjktMjQuOS03Ni45cy01LjIgNzguMyAxNy4xIDEyNS4xYzIyLjQgNDYuMiA4Ny44IDcxLjEgODcuOCAyOS4zek01MjYuOCA2ODguOWMtMjktMjAtNTAuNC0zOS43LTQ1LjctNjYuNSA0LjctMjYuOCAyMC41LTY5LjEgMjAuNS02OS4xcy0zOC4zIDI4LjUtNTAuNCA2Mi4zYy0xMi4yIDM0LjEtMS45IDU3LjEgMjYuMyA3Ni45IDI4LjIgMTkuNiA4My42IDMxLjggODMuNiAzMS44cy01LjItMTUuNC0zNC4zLTM1LjR6TTY2NS44IDY2MC41aC0zNC42bC05My41LTkzLjVINTIzTDYzMS4yIDY3N2gzNC42ek03MTIuNSA3NzcuMUg3MzJsLTEwLjMtMTAuM0w1NTIuMyA2Mzd2MTUuNWwxNDkuOSAxMjUuMXptLTE2MC4yLTEyNS4xdi0xNS4xTDM1MS42IDQ3N2gtMTkuNmwyMjAuMyAyMjAuM3YtNDUuM3pNMzIyLjkgNjE0LjRoOTcuM3YxNS4xaC05Ny4zeiIvPjwvc3ZnPg=="
-            alt="11Sari Logo" class="logo-image" width="50" height="50">
-          <span class="logo-text">11<span class="logo-highlight">Sari</span></span>
-        </a>
+  <!-- 9. FAQ SECTION - Addressing Concerns -->
+  <div class="faq-section">
+    <div class="faq-container">
+      <div class="section-header">
+        <span class="section-subtitle">COMMON QUESTIONS</span>
+        <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
+        <div class="accent-line"></div>
+        <p class="section-description">Find answers to the most common questions about our sarees, ordering process, and
+          shipping policies.</p>
       </div>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#" class="nav-link">Home</a></li>
-          <li><a href="saree-collection.html" class="nav-link">Collection</a></li>
-          <li><a href="#sacred-collections" class="nav-link">Sacred Sarees</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <div class="waitlist-section">
+      <div class="faq-wrapper">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What makes Banarasi silk sarees special?</h3>
+            <button class="toggle-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M12 18V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="faq-answer">
+            <p>Banarasi silk sarees are renowned for their gold and silver zari work, intricate designs, and dense silk
+              weave. The designs often feature traditional motifs like floral patterns, paisleys, and intricate borders.
+              Each saree takes anywhere from 15 days to 6 months to create by skilled artisans who have inherited this
+              craft through generations.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How do I care for my silk saree?</h3>
+            <button class="toggle-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M12 18V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="faq-answer">
+            <p>We recommend dry cleaning for your precious silk sarees. If hand washing is necessary, use cold water
+              with a mild detergent designed for silk. Never wring the saree; instead, gently squeeze out excess water
+              and roll it in a towel. Air dry in shade and store in a cotton or muslin cloth, away from direct sunlight.
+              Store with silica gel packets to prevent moisture damage.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do you ship internationally?</h3>
+            <button class="toggle-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M12 18V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, we offer worldwide shipping. International orders typically take 7-14 business days to arrive,
+              depending on your location. We use trusted courier services with tracking capabilities to ensure your
+              precious sarees reach you safely. Please note that customs duties and taxes are the responsibility of the
+              recipient.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What is your return policy?</h3>
+            <button class="toggle-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M12 18V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="faq-answer">
+            <p>We accept returns within 7 days of delivery for unworn items in their original packaging with tags
+              attached. Please note that custom-made or personalized sarees cannot be returned unless there is a
+              manufacturing defect. Contact our customer service team to initiate a return process.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Are your sarees authentic handloom products?</h3>
+            <button class="toggle-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 12H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M12 18V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely. Every saree in our collection is handwoven by master artisans from Varanasi. We source
+              directly from the weavers' communities and ensure fair trade practices. Each saree comes with a
+              certificate of authenticity detailing the weaving technique, materials used, and the artisan's
+              information.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End FAQ Section -->
+
+  <!-- 10. WAITLIST SECTION - Final Call to Action -->
+  <div id="waitlist" class="gjs-grid-row waitlist-section">
     <div class="waitlist-content">
       <h2 class="waitlist-title">Join Our Waitlist & Win a Free Saree!</h2>
       <p class="waitlist-description">Be the first to know about our exclusive collections, special offers, and
@@ -4168,228 +3665,162 @@
     </div>
   </div>
 
-  <!-- SEO-Focused Content Section -->
-  <section class="seo-content">
-    <div class="container">
-      <h2>Discover the Finest <span class="highlight-red">Sarees</span> in India</h2>
+  <!-- 11. WHATSAPP CHAT BUTTON - Always Available -->
+  <a href="https://wa.me/919663495817" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <div class="whatsapp-tooltip">Chat with us on WhatsApp</div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+      <path
+        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+    </svg>
+  </a>
 
-      <div class="seo-content-grid">
-        <div class="seo-text">
-          <h3>Authentic Banarasi Sarees - A Timeless Tradition</h3>
-          <p>At 11Sari, we bring you the most exquisite collection of authentic Banarasi sarees directly from the looms
-            of Varanasi. Each saree is meticulously handcrafted by master artisans using techniques passed down through
-            generations, ensuring unparalleled quality and authenticity.</p>
+  <!-- Your existing Scripts -->
 
-          <h3>Premium Silk Sarees for Every Occasion</h3>
-          <p>Our extensive range includes traditional silk sarees, wedding sarees, designer party wear sarees, and
-            contemporary fusion sarees. From opulent Katan silk sarees with intricate zari work to lightweight georgette
-            sarees with modern designs, our collection caters to all preferences and occasions.</p>
-
-          <h3>Why Choose Our Sarees?</h3>
-          <ul class="seo-list">
-            <li><strong>Authentic Craftsmanship:</strong> Directly sourced from skilled weavers of Varanasi</li>
-            <li><strong>Premium Quality:</strong> Finest quality silk and materials that last for generations</li>
-            <li><strong>Exclusive Designs:</strong> Unique patterns and motifs not found elsewhere</li>
-            <li><strong>Ethical Production:</strong> Supporting traditional artisans and sustainable practices</li>
-            <li><strong>Customization:</strong> Bespoke sarees tailored to your preferences</li>
-          </ul>
-        </div>
-
-        <div class="seo-image">
-          <img src="https://source.unsplash.com/random/400x500/?silk,saree,indian" alt="Premium Banarasi Silk Saree"
-            loading="lazy">
-          <div class="seo-image-caption">Handcrafted with traditional techniques and premium materials</div>
-        </div>
+  <!-- Cookie Privacy Consent Banner -->
+  <div id="cookie-consent-banner" class="cookie-consent-banner">
+    <div class="cookie-content">
+      <div class="cookie-text">
+        <p>We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By
+          clicking "Accept", you consent to our use of cookies.</p>
       </div>
-
-      <div class="seo-categories">
-        <h3>Explore Our Saree Collections</h3>
-        <div class="category-grid">
-          <div class="category-card">
-            <h4>Wedding Sarees</h4>
-            <p>Opulent Banarasi silk sarees with rich gold and silver zari work, perfect for bridal occasions.</p>
-            <a href="wedding-sarees.html" class="category-link">View Collection</a>
-          </div>
-
-          <div class="category-card">
-            <h4>Designer Sarees</h4>
-            <p>Contemporary designer sarees with innovative patterns, embellishments, and modern aesthetics.</p>
-            <a href="designer-sarees.html" class="category-link">View Collection</a>
-          </div>
-
-          <div class="category-card">
-            <h4>Handloom Sarees</h4>
-            <p>Traditional handloom sarees showcasing authentic weaving techniques from across India.</p>
-            <a href="handloom-sarees.html" class="category-link">View Collection</a>
-          </div>
-
-          <div class="category-card">
-            <h4>Festive Sarees</h4>
-            <p>Vibrant and elegant sarees perfect for festivals, celebrations, and special occasions.</p>
-            <a href="festive-sarees.html" class="category-link">View Collection</a>
-          </div>
-        </div>
+      <div class="cookie-buttons">
+        <button id="cookie-accept" class="cookie-button accept">Accept</button>
+        <button id="cookie-settings" class="cookie-button settings">Cookie Settings</button>
       </div>
     </div>
-  </section>
+  </div>
 
-  <style>
-    /* SEO Content Section Styles */
-    .seo-content {
-      padding: 5rem 0;
-      background: linear-gradient(135deg, #fff5f5, #ffffff);
-    }
+  <!-- Cookie Settings Modal -->
+  <div id="cookie-settings-modal" class="cookie-settings-modal">
+    <div class="cookie-settings-content">
+      <div class="cookie-settings-header">
+        <h3>Cookie Settings</h3>
+        <button id="close-settings" class="close-settings">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path d="M6 6L18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="cookie-settings-body">
+        <div class="cookie-option">
+          <div class="cookie-option-header">
+            <h4>Essential Cookies</h4>
+            <label class="toggle disabled">
+              <input type="checkbox" checked disabled>
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <p>These cookies are necessary for the website to function properly and cannot be disabled.</p>
+        </div>
+        <div class="cookie-option">
+          <div class="cookie-option-header">
+            <h4>Analytics Cookies</h4>
+            <label class="toggle">
+              <input type="checkbox" id="analytics-cookies" checked>
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <p>Help us understand how visitors interact with our website by collecting and reporting information
+            anonymously.</p>
+        </div>
+        <div class="cookie-option">
+          <div class="cookie-option-header">
+            <h4>Marketing Cookies</h4>
+            <label class="toggle">
+              <input type="checkbox" id="marketing-cookies" checked>
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <p>Help us provide you with relevant content and marketing campaigns across websites and platforms.</p>
+        </div>
+      </div>
+      <div class="cookie-settings-footer">
+        <button id="save-preferences" class="cookie-button accept">Save Preferences</button>
+      </div>
+    </div>
+  </div>
 
-    .seo-content h2 {
-      text-align: center;
-      color: #8B0000;
-      font-size: 2.5rem;
-      margin-bottom: 3rem;
-      font-family: 'Playfair Display', serif;
-    }
+  <script>
+    // Cookie Consent Management
+    document.addEventListener('DOMContentLoaded', function () {
+      const cookieBanner = document.getElementById('cookie-consent-banner');
+      const cookieModal = document.getElementById('cookie-settings-modal');
+      const acceptBtn = document.getElementById('cookie-accept');
+      const settingsBtn = document.getElementById('cookie-settings');
+      const closeSettingsBtn = document.getElementById('close-settings');
+      const savePreferencesBtn = document.getElementById('save-preferences');
+      const analyticsCookies = document.getElementById('analytics-cookies');
+      const marketingCookies = document.getElementById('marketing-cookies');
 
-    .seo-content-grid {
-      display: flex;
-      gap: 3rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+      // Check if user has already set cookie preferences
+      const cookieConsent = getCookie('11sari_cookie_consent');
 
-    .seo-text {
-      flex: 3;
-    }
-
-    .seo-text h3 {
-      color: #8B0000;
-      font-size: 1.5rem;
-      margin: 1.5rem 0 1rem;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .seo-text p {
-      color: #333;
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-    }
-
-    .seo-list {
-      padding-left: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .seo-list li {
-      padding: 0.5rem 0;
-      color: #333;
-    }
-
-    .seo-image {
-      flex: 2;
-      position: relative;
-    }
-
-    .seo-image img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 10px 30px rgba(179, 0, 0, 0.1);
-    }
-
-    .seo-image-caption {
-      background: rgba(179, 0, 0, 0.8);
-      color: white;
-      padding: 0.8rem 1.5rem;
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      right: 20px;
-      border-radius: 4px;
-      font-size: 0.9rem;
-      text-align: center;
-    }
-
-    .seo-categories {
-      max-width: 1200px;
-      margin: 4rem auto 0;
-    }
-
-    .seo-categories h3 {
-      color: #8B0000;
-      font-size: 1.8rem;
-      margin-bottom: 2rem;
-      text-align: center;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .category-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
-    .category-card {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      transition: all 0.3s ease;
-      border: 1px solid #ffecec;
-    }
-
-    .category-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(179, 0, 0, 0.1);
-    }
-
-    .category-card h4 {
-      color: #8B0000;
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-    }
-
-    .category-card p {
-      color: #555;
-      font-size: 0.95rem;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-    }
-
-    .category-link {
-      color: #B30000;
-      font-weight: 600;
-      text-decoration: none;
-      position: relative;
-      display: inline-block;
-    }
-
-    .category-link::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: #B30000;
-      transition: width 0.3s ease;
-    }
-
-    .category-link:hover::after {
-      width: 100%;
-    }
-
-    @media (max-width: 768px) {
-      .seo-content-grid {
-        flex-direction: column;
+      if (!cookieConsent) {
+        // Show cookie banner if no preferences are set
+        cookieBanner.classList.add('active');
       }
 
-      .seo-image {
-        margin-top: 2rem;
+      // Accept all cookies
+      acceptBtn.addEventListener('click', function () {
+        setCookiePreferences(true, true);
+        cookieBanner.classList.remove('active');
+      });
+
+      // Open cookie settings
+      settingsBtn.addEventListener('click', function () {
+        cookieBanner.classList.remove('active');
+        cookieModal.classList.add('active');
+      });
+
+      // Close cookie settings
+      closeSettingsBtn.addEventListener('click', function () {
+        cookieModal.classList.remove('active');
+        if (!cookieConsent) {
+          cookieBanner.classList.add('active');
+        }
+      });
+
+      // Save cookie preferences
+      savePreferencesBtn.addEventListener('click', function () {
+        setCookiePreferences(
+          analyticsCookies.checked,
+          marketingCookies.checked
+        );
+        cookieModal.classList.remove('active');
+      });
+
+      // Set cookie preferences function
+      function setCookiePreferences(analytics, marketing) {
+        const preferences = {
+          essential: true, // Always enabled
+          analytics: analytics,
+          marketing: marketing,
+          timestamp: new Date().toISOString()
+        };
+
+        // Set cookie for 6 months
+        setCookie('11sari_cookie_consent', JSON.stringify(preferences), 180);
       }
 
-      .category-grid {
-        grid-template-columns: 1fr;
+      // Helper function to set cookies
+      function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/;SameSite=Lax";
       }
-    }
-  </style>
+
+      // Helper function to get cookies
+      function getCookie(name) {
+        const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        if (match) return match[2];
+        return null;
+      }
+    });
+  </script>
 
 </body>
 
