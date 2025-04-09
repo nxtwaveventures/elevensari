@@ -2,13 +2,13 @@
 
 /* Page headers */
 .page-header {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #B30000, #8B0000);
+    padding: 3.5rem 2.5rem;
     border-radius: 0.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     position: relative;
     overflow: hidden;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     border: 1px solid rgba(212, 175, 55, 0.5);
     margin-top: 1.5rem;
 }
@@ -28,29 +28,31 @@
     color: white;
     position: relative;
     z-index: 1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    font-size: 2.8rem;
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
 }
 
 .page-header .text-main-content {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 1);
     position: relative;
     z-index: 1;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* Section styling */
 .content-section {
     background-color: var(--bg-white);
     border-radius: 0.5rem;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--border-light);
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.2);
     position: relative;
     overflow: hidden;
 }
@@ -61,15 +63,17 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+    height: 5px;
+    background: linear-gradient(90deg, #B30000, #D4AF37);
 }
 
 .content-section h2 {
-    color: var(--primary-color);
+    color: #B30000;
+    font-size: 28px;
     position: relative;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.8rem;
+    font-family: 'Playfair Display', serif;
 }
 
 .content-section h2::after {
@@ -77,9 +81,9 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 50px;
-    height: 2px;
-    background-color: var(--secondary-color);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #B30000, #D4AF37);
 }
 
 .content-section h3 {
@@ -88,13 +92,21 @@
 }
 
 .content-section .text-main-content {
-    text-align: left;
+    color: #222;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.content-section p {
+    color: #222;
+    margin-bottom: 1.2rem;
 }
 
 /* Gold accents */
 .gold-accent {
-    color: var(--secondary-color);
+    color: #D4AF37;
     font-weight: 600;
+    text-shadow: 0 0 1px rgba(212, 175, 55, 0.3);
 }
 
 /* Navigation link */
@@ -121,22 +133,42 @@
     box-shadow: var(--shadow-md), 0 0 10px rgba(212, 175, 55, 0.3);
 }
 
-/* Blog items */
+/* Enhanced Blog Item Styling */
 .blog-item {
-    border-left: 3px solid var(--secondary-color);
-    padding-left: 1.5rem;
-    margin-bottom: 2rem;
+    border-left: 3px solid #D4AF37;
+    padding-left: 1.8rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.blog-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #D4AF37;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
 }
 
 .blog-item h2 {
-    margin-bottom: 0.5rem;
+    color: #B30000;
+    margin-bottom: 0.6rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
 }
 
 .blog-date {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+    color: #444;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
     display: block;
+}
+
+.blog-date strong {
+    color: #222;
 }
 
 /* Form styling */
@@ -166,20 +198,50 @@
     box-shadow: var(--shadow-md), 0 0 10px rgba(212, 175, 55, 0.5);
 }
 
-/* Social links */
+/* Enhanced button styling */
+.gjs-button,
+.explore-button {
+    background: linear-gradient(135deg, #B30000, #8B0000);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.gjs-button:hover,
+.explore-button:hover {
+    background: linear-gradient(135deg, #8B0000, #B30000);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(179, 0, 0, 0.2);
+}
+
+/* Social links enhancement */
 .social-links {
     display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 1.2rem;
+    margin-top: 1.2rem;
 }
 
 .social-links a {
-    color: var(--primary-color);
-    transition: color var(--transition-fast);
+    color: #B30000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 1.05rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
 }
 
 .social-links a:hover {
-    color: var(--secondary-color);
+    color: #D4AF37;
+    background-color: rgba(212, 175, 55, 0.08);
 }
 
 /* List styling */
@@ -190,8 +252,11 @@
 
 .styled-list li {
     position: relative;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     padding-left: 1.5rem;
+    color: #222;
+    font-size: 1.05rem;
+    line-height: 1.8;
 }
 
 .styled-list li::before {
@@ -199,10 +264,11 @@
     position: absolute;
     left: 0;
     top: 0.6rem;
-    width: 8px;
-    height: 8px;
-    background-color: var(--secondary-color);
+    width: 10px;
+    height: 10px;
+    background-color: #D4AF37;
     border-radius: 50%;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
 }
 
 /* Numbered list styling */
@@ -248,7 +314,7 @@
     }
 
     .content-section {
-        padding: 1.5rem;
+        padding: 2rem 1.5rem;
     }
 }
 
@@ -305,11 +371,11 @@
 }
 
 .main-nav .nav-link {
-    color: #333;
+    color: #222;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-    padding: 0.5rem 0.8rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.6rem 1rem;
     border-radius: 4px;
     transition: all 0.3s ease;
     position: relative;
@@ -323,8 +389,8 @@
     content: '';
     position: absolute;
     width: 0;
-    height: 2px;
-    bottom: 0;
+    height: 3px;
+    bottom: -2px;
     left: 50%;
     background: linear-gradient(to right, #B30000, #D4AF37);
     transition: all 0.3s ease;
@@ -335,14 +401,14 @@
     width: 100%;
 }
 
-/* Active page indicator */
 .main-nav .nav-link.active {
     color: #B30000;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .main-nav .nav-link.active::after {
     width: 100%;
+    height: 3px;
 }
 
 /* Adjust spacing for pages with top content */
@@ -381,7 +447,7 @@ body {
 .policy-container h1 {
     text-align: center;
     margin-bottom: 40px;
-    color: #333;
+    color: #1a1a1a;
     font-size: 36px;
     font-family: 'Playfair Display', serif;
     position: relative;
@@ -401,7 +467,7 @@ body {
 .policy-content {
     background-color: #fff;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
     padding: 40px;
     margin-bottom: 40px;
     border: 1px solid rgba(212, 175, 55, 0.15);
@@ -415,14 +481,14 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
+    height: 5px;
     background: linear-gradient(90deg, #B30000, #D4AF37);
 }
 
 .policy-content section {
     margin-bottom: 30px;
     position: relative;
-    padding-left: 15px;
+    padding-left: 20px;
 }
 
 .policy-content section::before {
@@ -432,42 +498,44 @@ body {
     top: 8px;
     bottom: 8px;
     width: 3px;
-    background: linear-gradient(180deg, rgba(179, 0, 0, 0.1), rgba(212, 175, 55, 0.1));
+    background: linear-gradient(180deg, rgba(179, 0, 0, 0.2), rgba(212, 175, 55, 0.2));
     border-radius: 10px;
 }
 
 .policy-content h2 {
     color: #B30000;
-    font-size: 24px;
-    margin-bottom: 15px;
-    padding-bottom: 8px;
+    font-size: 28px;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
     border-bottom: 1px solid rgba(212, 175, 55, 0.3);
     font-family: 'Playfair Display', serif;
 }
 
 .policy-content h3 {
-    color: #333;
-    font-size: 20px;
-    margin: 20px 0 10px;
+    color: #222;
+    font-size: 22px;
+    margin: 22px 0 12px;
     font-weight: 600;
 }
 
 .policy-content p {
-    color: #555;
-    line-height: 1.7;
-    margin-bottom: 16px;
+    color: #222;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    font-size: 1.05rem;
 }
 
 .policy-content ul,
 .policy-content ol {
-    color: #555;
-    line-height: 1.7;
-    margin-bottom: 16px;
+    color: #222;
+    line-height: 1.8;
+    margin-bottom: 18px;
     padding-left: 25px;
+    font-size: 1.05rem;
 }
 
 .policy-content li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     position: relative;
 }
 
@@ -484,8 +552,9 @@ body {
     color: #B30000;
     text-decoration: none;
     transition: color 0.3s;
-    border-bottom: 1px dashed rgba(179, 0, 0, 0.3);
+    border-bottom: 1px dashed rgba(179, 0, 0, 0.5);
     padding-bottom: 2px;
+    font-weight: 500;
 }
 
 .policy-content a:hover {
@@ -494,14 +563,14 @@ body {
 }
 
 .policy-content strong {
-    color: #333;
+    color: #222;
     font-weight: 600;
 }
 
 .policy-footer {
     text-align: center;
     margin-top: 40px;
-    color: #777;
+    color: #444;
     font-size: 14px;
     padding-top: 20px;
     border-top: 1px solid #eee;
@@ -523,17 +592,19 @@ body {
     padding: 5px 15px;
     border-radius: 20px;
     font-weight: 500;
+    font-size: 1.05rem;
 }
 
 .footer-links a:hover {
-    color: #D4AF37;
-    background-color: rgba(212, 175, 55, 0.08);
+    color: #fff;
+    background-color: #D4AF37;
 }
 
 .footer-links a.active {
     color: white;
     background: linear-gradient(135deg, #B30000, #991100);
     font-weight: 600;
+    box-shadow: 0 2px 10px rgba(179, 0, 0, 0.2);
 }
 
 /* Gold Highlights and Decorations */
@@ -544,8 +615,8 @@ body {
 
 .section-divider {
     height: 1px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(212, 175, 55, 0.3), rgba(255, 255, 255, 0));
-    margin: 30px 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(212, 175, 55, 0.5), rgba(255, 255, 255, 0));
+    margin: 35px 0;
     position: relative;
 }
 
@@ -558,7 +629,7 @@ body {
     background: white;
     padding: 0 15px;
     color: #D4AF37;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 /* Responsive Styling */
@@ -577,11 +648,15 @@ body {
     }
 
     .policy-content h2 {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .policy-content h3 {
-        font-size: 18px;
+        font-size: 20px;
+    }
+
+    .content-section {
+        padding: 2rem 1.5rem;
     }
 }
 
@@ -594,7 +669,7 @@ body {
     .footer-links {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
     }
 
     .footer-links a {
@@ -602,4 +677,29 @@ body {
         width: 80%;
         text-align: center;
     }
+}
+
+/* Custom styling for copyright footer */
+.copyright {
+    color: #222;
+    text-align: center;
+    font-size: 1rem;
+    margin: 20px 0;
+    font-weight: 500;
+}
+
+/* Enhancing text content for all pages */
+.text-main-content p {
+    color: #222;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+}
+
+.gjs-text-blue {
+    color: #222 !important;
+    font-weight: 500;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1rem;
 }
