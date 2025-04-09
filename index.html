@@ -185,6 +185,228 @@
   </script>
 
   <style>
+    /* Modern Celebratory Color Scheme */
+    :root {
+      --blood-red: #8B0000;
+      --deep-red: #B22222;
+      --celebration-red: #DC143C;
+      --pastel-red: #FFB6C1;
+      --light-pastel: #FFE4E1;
+      --accent-gold: #FFD700;
+      --text-dark: #2C0000;
+      --text-medium: #4A0000;
+      --text-light: #800000;
+      --background-gradient-1: #FFE4E1;
+      --background-gradient-2: #FFB6C1;
+    }
+
+    /* Modern Header Styling */
+    .site-header {
+      background: linear-gradient(135deg, var(--blood-red), var(--deep-red));
+      box-shadow: 0 2px 15px rgba(139, 0, 0, 0.2);
+      animation: headerGlow 3s infinite alternate;
+    }
+
+    @keyframes headerGlow {
+      from {
+        box-shadow: 0 2px 15px rgba(139, 0, 0, 0.2);
+      }
+
+      to {
+        box-shadow: 0 2px 20px rgba(220, 20, 60, 0.4);
+      }
+    }
+
+    /* Navigation Links */
+    .main-nav .nav-link {
+      color: var(--light-pastel);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .main-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent-gold);
+      transition: width 0.3s ease;
+    }
+
+    .main-nav .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .main-nav .nav-link:hover {
+      color: var(--accent-gold);
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section Enhancement */
+    .hero-section {
+      background: linear-gradient(135deg, var(--blood-red) 0%, var(--deep-red) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at center, transparent 0%, rgba(139, 0, 0, 0.6) 100%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-title {
+      color: var(--light-pastel);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      animation: titleGlow 2s infinite alternate;
+    }
+
+    @keyframes titleGlow {
+      from {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      to {
+        text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.5);
+      }
+    }
+
+    /* Modern Button Styling */
+    .sacred-cta,
+    .hero-cta,
+    .collection-cta,
+    .showcase-cta {
+      background: linear-gradient(135deg, var(--celebration-red), var(--blood-red));
+      color: var(--light-pastel);
+      border: none;
+      padding: 1rem 2.5rem;
+      border-radius: 30px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sacred-cta::before,
+    .hero-cta::before,
+    .collection-cta::before,
+    .showcase-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: 0.5s;
+    }
+
+    .sacred-cta:hover::before,
+    .hero-cta:hover::before,
+    .collection-cta:hover::before,
+    .showcase-cta:hover::before {
+      left: 100%;
+    }
+
+    .sacred-cta:hover,
+    .hero-cta:hover,
+    .collection-cta:hover,
+    .showcase-cta:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 6px 20px rgba(139, 0, 0, 0.4);
+      background: linear-gradient(135deg, var(--blood-red), var(--celebration-red));
+    }
+
+    /* Section Styling */
+    .sacred-sarees-section,
+    .testimonials-section,
+    .newsletter-section {
+      background: linear-gradient(135deg, var(--background-gradient-1), var(--background-gradient-2));
+      position: relative;
+    }
+
+    .sacred-sarees-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1" fill="%23DC143C" fill-opacity="0.1"/></svg>') repeat;
+      z-index: 1;
+    }
+
+    /* Product Cards Enhancement */
+    .product-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(139, 0, 0, 0.1);
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(139, 0, 0, 0.2);
+    }
+
+    /* Celebration Elements */
+    .celebration-accent {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 1l4 8 8 4-8 4-4 8-4-8-8-4 8-4z" fill="%23FFD700" fill-opacity="0.1"/></svg>') repeat;
+    }
+
+    /* Text Enhancement */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--text-dark);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .highlight {
+      background: linear-gradient(120deg, var(--celebration-red), var(--blood-red));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: inline-block;
+      padding: 0 5px;
+      position: relative;
+    }
+
+    /* Hover Effects */
+    .hover-glow {
+      transition: all 0.3s ease;
+    }
+
+    .hover-glow:hover {
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+
     /* Updated color variables */
     :root {
       --primary-light: #ffd6d6;
