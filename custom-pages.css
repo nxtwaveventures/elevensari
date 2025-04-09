@@ -1,14 +1,29 @@
 /* Custom styles for the additional pages to match the royal red and gold theme */
 
+/* Modern Color Scheme Variables */
+:root {
+    --blood-red: #8B0000;
+    --deep-red: #B22222;
+    --celebration-red: #DC143C;
+    --pastel-red: #FFB6C1;
+    --light-pastel: #FFE4E1;
+    --accent-gold: #FFD700;
+    --text-dark: #2C0000;
+    --text-medium: #4A0000;
+    --text-light: #800000;
+    --background-gradient-1: #FFE4E1;
+    --background-gradient-2: #FFB6C1;
+}
+
 /* Page headers */
 .page-header {
-    background: linear-gradient(135deg, #B30000, #8B0000);
+    background: linear-gradient(135deg, var(--blood-red), var(--deep-red));
     padding: 4rem 3rem;
     border-radius: 1rem;
     margin-bottom: 3rem;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 40px rgba(139, 0, 0, 0.2);
     border: none;
     margin-top: 2rem;
 }
@@ -32,12 +47,12 @@
     left: 0;
     right: 0;
     height: 6px;
-    background: linear-gradient(90deg, #D4AF37, #FADA5E, #D4AF37);
+    background: linear-gradient(90deg, var(--pastel-red), var(--light-pastel), var(--pastel-red));
     z-index: 2;
 }
 
 .page-header h1 {
-    color: white;
+    color: var(--light-pastel);
     position: relative;
     z-index: 1;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -55,7 +70,7 @@
 }
 
 .page-header .text-main-content {
-    color: rgba(255, 255, 255, 1);
+    color: var(--light-pastel);
     position: relative;
     z-index: 1;
     text-align: center;
@@ -66,12 +81,12 @@
 
 /* Section styling */
 .content-section {
-    background-color: var(--bg-white);
+    background-color: white;
     border-radius: 0.5rem;
     padding: 2.5rem;
     margin-bottom: 2.5rem;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 15px 30px rgba(139, 0, 0, 0.08);
+    border: 1px solid rgba(255, 182, 193, 0.2);
     position: relative;
     overflow: hidden;
 }
@@ -83,11 +98,11 @@
     left: 0;
     right: 0;
     height: 5px;
-    background: linear-gradient(90deg, #B30000, #D4AF37);
+    background: linear-gradient(90deg, var(--blood-red), var(--celebration-red));
 }
 
 .content-section h2 {
-    color: #B30000;
+    color: var(--blood-red);
     font-size: 28px;
     position: relative;
     padding-bottom: 0.8rem;
@@ -102,11 +117,11 @@
     left: 0;
     width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, #B30000, #D4AF37);
+    background: linear-gradient(90deg, var(--blood-red), var(--celebration-red));
 }
 
 .content-section h3 {
-    color: var(--primary-dark);
+    color: var(--deep-red);
     margin-bottom: 1rem;
 }
 
@@ -193,28 +208,39 @@
 /* Form styling */
 .contact-form input,
 .contact-form textarea {
-    border: 1px solid var(--border-light);
+    border: 1px solid var(--pastel-red);
     border-radius: 0.25rem;
-    transition: border-color var(--transition-fast);
+    padding: 0.8rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: var(--secondary-color);
     outline: none;
-    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+    border-color: var(--celebration-red);
+    box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.1);
 }
 
 .contact-form button {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-    border: 1px solid rgba(212, 175, 55, 0.5);
-    color: white;
+    background: linear-gradient(135deg, var(--celebration-red), var(--blood-red));
+    color: var(--light-pastel);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
 }
 
 .contact-form button:hover {
-    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md), 0 0 10px rgba(212, 175, 55, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(139, 0, 0, 0.4);
+    background: linear-gradient(135deg, var(--blood-red), var(--celebration-red));
 }
 
 /* Enhanced button styling */
