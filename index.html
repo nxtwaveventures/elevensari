@@ -1764,47 +1764,98 @@
 </head>
 
 <body>
-  <!-- 1. HEADER - Navigation -->
-  <header class="site-header">
-    <div class="header-container">
-      <div class="logo">
-        <a href="index.html">
-          <img
-            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgODAwIiBmaWxsPSIjOEIwMDAwIj48cGF0aCBkPSJNNDcxLjIgMTY5LjFjMTguMyAwIDM0LjYgMTMuMSAzNC42IDI5LjIgMCAxNi4xLTE1LjggMjkuMi0zNC42IDI5LjItMTguMyAwLTM0LjYtMTMuMS0zNC42LTI5LjIgMC0xNi4xIDE1LjgtMjkuMiAzNC42LTI5LjJ6Ii8+PHBhdGggZD0iTTQ3MS42IDExMC42bC0yNC4yIDE2Yy0xNCA5LjQtMjMuNCAyNS41LTIzLjQgNDIuNiAwIDE2LjYgOS40IDMyLjMgMjMuNCA0MS43bDI0LjIgMTYuMSAyNC4yLTE2LjFjMTQtOS40IDIzLjQtMjUuNSAyMy40LTQyLjEgMC0xNi42LTkuNC0zMi4zLTIzLjQtNDEuN2wtMjQuMi0xNi41em0wIDIwLjFsMTkuMyAxM2MxMS4yIDcuNSAxOC44IDIwLjUgMTguOCAzMy45IDAgMTMuNS03LjUgMjYuNC0xOC44IDMzLjlsLTE5LjMgMTMtMTkuMy0xM2MtMTEuMi03LjUtMTguOC0yMC41LTE4LjgtMzMuOSAwLTEzLjUgNy41LTI2LjQgMTguOC0zMy45bDE5LjMtMTN6Ii8+PHBhdGggZD0iTTQ2NS4xIDI0OS42czU5LjggNzguMyA3MyAxMTRjMTMuMSAzNiAyMS40IDIyLjkgNDQuOC0xMi42IDIwLjEtMzAuNCA0NS43LTcwLjIgNDUuNy03MC4ySzQ2Ny4yIDMwMC45IDQ2NS4xIDI0OS42eiIvPjxwYXRoIGQ9Ik01NDQgMjYwLjRzLTU2LjEgMzYuOS04Ni45IDY1LjVjLTMwLjggMjguNS03MyA3OS43LTczIDc5LjdzMzYuNS0xNi4xIDc0LjktNTIuMWMzOC4zLTM1LjkgODUuLTkzLjEgODUtOTMuMXpNNTMyLjQgMzY0LjFzLTIzLjkgNTEuNy0zNy44IDk2LjJjLTEzLjggNDQuMS0yMCAxMDIuNi0yMCAxMDIuNnMyMy0zNy44IDQ1LjctODUuOWMyMy4yLTQ3LjYgNTkuNi0xMjYuNSA1OS42LTEyNi41cy00Ny41IDEzLjYtNDcuNSAxMy42eiIvPjxwYXRoIGQ9Ik01NzcuNyA0NjkuN3MtNDEuMy0yMC4xLTc5LjItMjAuMWMtMzcuOCAwLTkxLjQgMTcuNS05MS40IDE3LjVzNjYuNSA0My43IDk3LjMgNDMuN2MzMSAwIDczLjMtNDEuMSA3My4zLTQxLjF6TTY0NS42IDUzMC41cy01NC4zLTIuMy03Mi4zIDYuNmMtMTgsMC00NS4zIDI3LjYtNjkuNSA2OS4xLTI0LjEgNDEuMy03MC45IDE0Mi4zLTcwLjkgMTQyLjNzMzktNTIuNiA2Ni41LTg1LjljMjcuNi0zMy4yIDg3LjYtMTAxLjQgODcuNi0xMDEuNCAwIDAgNTguNi0yMC43IDU4LjYtMzAuN3pNMjYwIDIxNi43di0zOGgtNTQuOXYzOEgxOTB2MjEyLjloMTUuMXYtOTBoNTQuOXY5MGgxNS4xVjIxNi43SDI2MHptLTE1LjEgMTAyaC01NC45di04MGg1NC45djgwek0xMDkuNyAyMTYuN0g4M2wyMTIuOSAyMTIuOWgzOS4yTDEwOS43IDIxNi43em0xNjMuOSAyMTIuOWwxNC0xNEw2OC4yIDIxNi43SDUzLjVsMjIwLjEgMjEyLjl6TTMwOS44IDQzOS45bDQ5IDQ5aDE5LjZsLTYxLjgtNjEuOC0xNDAuNi0xNDBINjkuM2wyNDAuNSAyNDAuNXYtODcuN3pNMzkwLjMgNDg4LjhoMTkuNWw2MS44LTYxLjggNDAuMS00MEgzOTAuM1Y0ODguOXoiLz48cGF0aCBkPSJNMjgyLjkgNDI5LjZoNTQuOXYxMDEuNEgzNTNWNDI5LjZoNTQuOVY0MTRoLTEyNXYxNS42em0yNzYuNSA1OXMtNjYuNS00Ni4yLTgwLTc3LjVjLTEzLjYtMzEuMy0yNC45LTc2LjktMjQuOS03Ni45cy01LjIgNzguMyAxNy4xIDEyNS4xYzIyLjQgNDYuMiA4Ny44IDcxLjEgODcuOCAyOS4zek01MjYuOCA2ODguOWMtMjktMjAtNTAuNC0zOS43LTQ1LjctNjYuNSA0LjctMjYuOCAyMC41LTY5LjEgMjAuNS02OS4xcy0zOC4zIDI4LjUtNTAuNCA2Mi4zYy0xMi4yIDM0LjEtMS45IDU3LjEgMjYuMyA3Ni45IDI4LjIgMTkuNiA4My42IDMxLjggODMuNiAzMS44cy01LjItMTUuNC0zNC4zLTM1LjR6TTY2NS44IDY2MC41aC0zNC42bC05My41LTkzLjVINTIzTDYzMS4yIDY3N2gzNC42ek03MTIuNSA3NzcuMUg3MzJsLTEwLjMtMTAuM0w1NTIuMyA2Mzd2MTUuNWwxNDkuOSAxMjUuMXptLTE2MC4yLTEyNS4xdi0xNS4xTDM1MS42IDQ3N2gtMTkuNmwyMjAuMyAyMjAuM3YtNDUuM3pNMzIyLjkgNjE0LjRoOTcuM3YxNS4xaC05Ny4zeiIvPjwvc3ZnPg=="
-            alt="11Sari Logo" class="logo-image" width="50" height="50">
-          <span class="logo-text">11<span class="logo-highlight">Sari</span></span>
-        </a>
-      </div>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#" class="nav-link">Home</a></li>
-          <li><a href="saree-collection.html" class="nav-link">Collection</a></li>
-          <li><a href="#sacred-collections" class="nav-link">Sacred Sarees</a></li>
-          <li><a href="#featured-section" class="nav-link">Featured</a></li>
-          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- 2. HERO SECTION - First Impression -->
-  <div class="hero-section">
-    <div class="hero-content">
-      <h1 class="hero-title">
-        <span class="white-text">WOVEN IN GOLD,</span>
-        <span class="gold-text">DRAPED IN LEGACY</span>
-      </h1>
-      <p class="hero-subtitle">Experience the imperial splendor of authentic Varanasi silks, where centuries of
-        craftsmanship meet timeless elegance</p>
-      <div class="hero-buttons">
-        <a href="#sacred-sarees-section" class="hero-cta">Sacred Collections</a>
-        <a href="saree-collection.html" target="_blank" class="collection-cta">Buy Now</a>
+  <!-- 1. NAVIGATION BAR - Sticky & Elegant -->
+  <div class="gjs-grid-row" id="i6po">
+    <div class="gjs-grid-row" id="iyd2">
+      <a href="#" id="inmvj" class="gjs-link">
+        <div id="is8e" class="logo-container">11<span class="accent-text">Sari</span></div>
+      </a>
+      <div id="idhx" class="nav-links">
+        <a href="#" id="imjps" class="gjs-link">Home</a>
+        <a href="saree-collection.html" id="i3n7" class="gjs-link">Collections</a>
+        <a href="about-us.html" id="i0wg7" class="gjs-link">About</a>
+        <a href="contact-us.html" id="iibm9" class="gjs-link">Contact</a>
       </div>
     </div>
   </div>
 
-  <!-- 3. SACRED SAREES SECTION - Emotional Connection -->
+  <!-- 2. HERO SECTION - Visual Focus -->
+  <div class="hero-section">
+    <div class="hero-background">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">Timeless Elegance<br><span class="title-accent">Handcrafted Sarees</span></h1>
+      <p class="hero-description">Authentic Banarasi silk, woven by master artisans of Varanasi</p>
+      <div class="hero-buttons">
+        <a href="#sacred-sarees-section" class="hero-cta">Explore Collection</a>
+        <a href="saree-collection.html" class="collection-cta">Shop Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. FEATURED COLLECTIONS - Visual Gallery -->
+  <div class="featured-collections">
+    <div class="section-container">
+      <div class="section-header">
+        <h2>Our <span class="highlight">Signature</span> Collections</h2>
+        <div class="accent-line"></div>
+      </div>
+
+      <div class="collections-grid">
+        <div class="collection-card">
+          <div class="collection-image">
+            <img src="https://source.unsplash.com/random/600x800/?red,saree" alt="Wedding Collection">
+            <div class="collection-overlay">
+              <h3>Wedding</h3>
+              <a href="saree-collection.html" class="collection-link">View Collection</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="collection-card">
+          <div class="collection-image">
+            <img src="https://source.unsplash.com/random/600x800/?gold,saree" alt="Festive Collection">
+            <div class="collection-overlay">
+              <h3>Festive</h3>
+              <a href="saree-collection.html" class="collection-link">View Collection</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="collection-card">
+          <div class="collection-image">
+            <img src="https://source.unsplash.com/random/600x800/?silk,saree" alt="Premium Silk Collection">
+            <div class="collection-overlay">
+              <h3>Premium Silk</h3>
+              <a href="saree-collection.html" class="collection-link">View Collection</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. OUR STORY - Simplified -->
+  <div class="story-section">
+    <div class="section-container">
+      <div class="story-content">
+        <div class="story-image">
+          <img src="https://source.unsplash.com/random/800x1000/?weaving,artisan" alt="Master Weaver">
+        </div>
+        <div class="story-text">
+          <h2>Our <span class="highlight">Heritage</span></h2>
+          <div class="accent-line"></div>
+          <p>For generations, our master weavers have preserved the ancient art of Banarasi saree making, crafting each
+            piece with unparalleled skill and devotion.</p>
+          <p>Every saree tells a story of tradition, passed down through centuries of craftsmanship.</p>
+          <a href="about-us.html" class="story-link">Discover Our Journey</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. SACRED SAREES SECTION - Emotional Connection -->
   <div id="sacred-sarees-section" class="sacred-sarees-section">
     <div class="sacred-container">
       <div class="section-header">
@@ -2299,1373 +2350,144 @@
     });
   </script>
 
-  <!-- 4. SEO CONTENT SECTION - Educational Journey -->
-  <section id="explore-collections" class="seo-content">
-    <div class="container">
-      <h2>Discover the Finest <span class="highlight-red">Sarees</span> in India</h2>
+  <!-- 6. TESTIMONIALS - Trust Building -->
+  <div id="testimonials" class="testimonials-section">
+    <div class="section-container">
+      <div class="section-header">
+        <h2>What Our <span class="highlight">Customers</span> Say</h2>
+        <div class="accent-line"></div>
+      </div>
 
-      <div class="seo-content-grid">
-        <div class="seo-text">
-          <h3>Authentic Banarasi Sarees - A Timeless Tradition</h3>
-          <p>At 11Sari, we bring you the most exquisite collection of authentic Banarasi sarees directly from the looms
-            of Varanasi. Each saree is meticulously handcrafted by master artisans using techniques passed down through
-            generations, ensuring unparalleled quality and authenticity.</p>
+      <div class="testimonials-slider">
+        <div class="testimonial-card">
+          <div class="testimonial-image">
+            <img src="https://source.unsplash.com/random/100x100/?portrait,woman" alt="Priya Sharma">
+          </div>
+          <div class="testimonial-content">
+            <div class="testimonial-rating">★★★★★</div>
+            <p>"My wedding saree from 11Sari was a masterpiece. The craftsmanship and quality exceeded all my
+              expectations."</p>
+            <div class="testimonial-author">
+              <p class="author-name">Priya Sharma</p>
+              <p class="author-title">Delhi</p>
+            </div>
+          </div>
+        </div>
 
-          <h3>Premium Silk Sarees for Every Occasion</h3>
-          <p>Our extensive range includes traditional silk sarees, wedding sarees, designer party wear sarees, and
-            contemporary fusion sarees. From opulent Katan silk sarees with intricate zari work to lightweight georgette
-            sarees with modern designs, our collection caters to all preferences and occasions.</p>
+        <div class="testimonial-card">
+          <div class="testimonial-image">
+            <img src="https://source.unsplash.com/random/100x100/?portrait,indian,woman" alt="Anjali Patel">
+          </div>
+          <div class="testimonial-content">
+            <div class="testimonial-rating">★★★★★</div>
+            <p>"The attention to detail and the richness of the silk is incomparable. These sarees are truly heirloom
+              pieces."</p>
+            <div class="testimonial-author">
+              <p class="author-name">Anjali Patel</p>
+              <p class="author-title">Mumbai</p>
+            </div>
+          </div>
+        </div>
 
-          <h3>Why Choose Our Sarees?</h3>
-          <ul class="seo-list">
-            <li><strong>Authentic Craftsmanship:</strong> Directly sourced from skilled weavers of Varanasi</li>
-            <li><strong>Premium Quality:</strong> Finest quality silk and materials that last for generations</li>
-            <li><strong>Exclusive Designs:</strong> Unique patterns and motifs not found elsewhere</li>
-            <li><strong>Ethical Production:</strong> Supporting traditional artisans and sustainable practices</li>
-            <li><strong>Customization:</strong> Bespoke sarees tailored to your preferences</li>
+        <div class="testimonial-card">
+          <div class="testimonial-image">
+            <img src="https://source.unsplash.com/random/100x100/?portrait,woman,indian" alt="Lakshmi Rao">
+          </div>
+          <div class="testimonial-content">
+            <div class="testimonial-rating">★★★★★</div>
+            <p>"The customer service was exceptional, and my saree arrived beautifully packaged. Will definitely be
+              ordering again!"</p>
+            <div class="testimonial-author">
+              <p class="author-name">Lakshmi Rao</p>
+              <p class="author-title">Bangalore</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. SIMPLIFIED FOOTER -->
+  <footer class="footer">
+    <div class="section-container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <div class="footer-logo">11<span class="accent-text">Sari</span></div>
+          <p>Premium handcrafted Banarasi silk sarees. Authentic craftsmanship directly from the looms of Varanasi.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                </path>
+              </svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M12 20.5c6.5 0 8-3.8 8-7.5 0-2-1-3.5-2.5-4C18.5 8.2 19 7 19 5.5 19 3 17 1 12 1S5 3 5 5.5c0 1.5.5 2.7 1.5 3.5C5 9.5 4 11 4 13c0 3.7 1.5 7.5 8 7.5z">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="saree-collection.html">Collection</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact</a></li>
           </ul>
         </div>
 
-        <div class="seo-image">
-          <img src="https://source.unsplash.com/random/400x500/?silk,saree,indian" alt="Premium Banarasi Silk Saree"
-            loading="lazy">
-          <div class="seo-image-caption">Handcrafted with traditional techniques and premium materials</div>
+        <div class="footer-links">
+          <h3>Collections</h3>
+          <ul>
+            <li><a href="saree-collection.html">Wedding Sarees</a></li>
+            <li><a href="saree-collection.html">Festive Collection</a></li>
+            <li><a href="saree-collection.html">Premium Silk</a></li>
+            <li><a href="saree-collection.html">New Arrivals</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p><strong>Email:</strong> <a href="mailto:info@11sari.com">info@11sari.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+919663495817">+91 96634 95817</a></p>
+          <p><strong>Address:</strong> Varanasi Silk House, MG Road, Bangalore - 560001</p>
         </div>
       </div>
 
-      <div class="seo-categories">
-        <h3>Explore Our Saree Collections</h3>
-        <div class="category-grid">
-          <div class="category-card">
-            <h4>Wedding Sarees</h4>
-            <p>Opulent Banarasi silk sarees with rich gold and silver zari work, perfect for bridal occasions.</p>
-            <a href="wedding-sarees.html" class="category-link">View Collection</a>
-          </div>
-
-          <div class="category-card">
-            <h4>Designer Sarees</h4>
-            <p>Contemporary designer sarees with innovative patterns, embellishments, and modern aesthetics.</p>
-            <a href="designer-sarees.html" class="category-link">View Collection</a>
-          </div>
-
-          <div class="category-card">
-            <h4>Handloom Sarees</h4>
-            <p>Traditional handloom sarees showcasing authentic weaving techniques from across India.</p>
-            <a href="handloom-sarees.html" class="category-link">View Collection</a>
-          </div>
-
-          <div class="category-card">
-            <h4>Festive Sarees</h4>
-            <p>Vibrant and elegant sarees perfect for festivals, celebrations, and special occasions.</p>
-            <a href="festive-sarees.html" class="category-link">View Collection</a>
-          </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 11Sari. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Shipping Policy</a>
         </div>
       </div>
     </div>
-  </section>
+  </footer>
 
-  <!-- 5. FEATURED COLLECTION - Visual Showcase -->
-  <div id="featured-section" class="featured-collection-section">
-    <div class="featured-container">
-      <div class="section-header">
-        <span class="featured-subtitle">EXCLUSIVE COLLECTION</span>
-        <h2 class="featured-title">Handcrafted <span class="highlight">Masterpieces</span></h2>
-        <div class="accent-line"></div>
-        <p class="featured-description">Our most popular and exquisite sarees, handpicked for their exceptional
-          craftsmanship and timeless elegance</p>
-      </div>
-
-      <div class="featured-products">
-        <!-- Featured Product 1 -->
-        <div class="featured-product">
-          <div class="product-image">
-            <span class="discount-badge">-15%</span>
-            <img src="https://source.unsplash.com/random/600x900/?saree,silk,red" alt="Royal Crimson Banarasi Silk">
-            <div class="product-actions">
-              <a href="saree-collection.html" target="_blank" class="quick-view">Quick View</a>
-            </div>
-          </div>
-          <div class="product-details">
-            <h3 class="product-title">Royal Crimson Banarasi Silk</h3>
-            <div class="product-meta">
-              <div class="product-price">
-                <span class="current-price">₹24,999</span>
-                <span class="original-price">₹29,500</span>
-              </div>
-              <div class="product-rating">
-                <span class="stars">★★★★★</span>
-                <span class="count">(24)</span>
-              </div>
-            </div>
-            <a href="saree-collection.html" target="_blank" class="buy-now-btn">BUY NOW</a>
-          </div>
-        </div>
-
-        <!-- Featured Product 2 -->
-        <div class="featured-product">
-          <div class="product-image">
-            <span class="discount-badge">NEW ARRIVAL</span>
-            <img src="https://source.unsplash.com/random/600x900/?saree,silk,blue" alt="Sapphire Dream Kanjivaram">
-            <div class="product-actions">
-              <a href="saree-collection.html" target="_blank" class="quick-view">BUY NOW</a>
-            </div>
-          </div>
-          <div class="product-details">
-            <h3 class="product-title">Sapphire Dream Kanjivaram</h3>
-            <div class="product-meta">
-              <div class="product-price">
-                <span class="current-price">₹32,500</span>
-              </div>
-              <div class="product-rating">
-                <span class="stars">★★★★★</span>
-                <span class="count">(18)</span>
-              </div>
-            </div>
-            <a href="saree-collection.html" target="_blank" class="buy-now-btn">BUY NOW</a>
-          </div>
-        </div>
-
-        <!-- Featured Product 3 -->
-        <div class="featured-product">
-          <div class="product-image">
-            <span class="discount-badge">LIMITED EDITION</span>
-            <img src="https://source.unsplash.com/random/600x900/?saree,silk,wedding" alt="Bridal Elegance Collection">
-            <div class="product-actions">
-              <a href="saree-collection.html" target="_blank" class="quick-view">BUY NOW</a>
-            </div>
-          </div>
-          <div class="product-details">
-            <h3 class="product-title">Bridal Elegance Collection</h3>
-            <div class="product-meta">
-              <div class="product-price">
-                <span class="current-price">₹45,999</span>
-                <span class="original-price">₹49,999</span>
-              </div>
-              <div class="product-rating">
-                <span class="stars">★★★★★</span>
-                <span class="count">(32)</span>
-              </div>
-            </div>
-            <a href="saree-collection.html" target="_blank" class="buy-now-btn">BUY NOW</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="view-all-container">
-        <a href="saree-collection.html" target="_blank" class="view-all-btn">SHOP ALL SAREES</a>
-      </div>
-    </div>
-  </div>
-
-  <style>
-    /* Featured Collection Section Styles */
-    .featured-collection-section {
-      padding: 6rem 0;
-      background: linear-gradient(135deg, #fff, #fcf9f6);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .featured-collection-section::before,
-    .featured-collection-section::after {
-      content: '';
-      position: absolute;
-      border-radius: 50%;
-      z-index: 1;
-    }
-
-    .featured-collection-section::before {
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(212, 175, 55, 0.03) 0%, transparent 70%);
-      top: -150px;
-      right: -150px;
-    }
-
-    .featured-collection-section::after {
-      width: 350px;
-      height: 350px;
-      border: 2px solid rgba(179, 0, 0, 0.05);
-      bottom: -150px;
-      left: -100px;
-    }
-
-    .featured-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      position: relative;
-      z-index: 2;
-    }
-
-    .featured-subtitle {
-      display: inline-block;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 2px;
-      color: #B30000;
-      margin-bottom: 1rem;
-      position: relative;
-    }
-
-    .featured-subtitle::before,
-    .featured-subtitle::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      width: 30px;
-      height: 1px;
-      background: linear-gradient(to right, #B30000, transparent);
-    }
-
-    .featured-subtitle::before {
-      right: calc(100% + 15px);
-    }
-
-    .featured-subtitle::after {
-      left: calc(100% + 15px);
-      background: linear-gradient(to right, transparent, #B30000);
-    }
-
-    .featured-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      font-weight: 700;
-      color: #333;
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-
-    .featured-description {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto 3rem;
-      color: #555;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    .featured-products {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2.5rem;
-      margin-bottom: 3rem;
-    }
-
-    .featured-product {
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      transition: all 0.3s ease;
-      border: 1px solid rgba(212, 175, 55, 0.1);
-    }
-
-    .featured-product:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-      border-color: rgba(179, 0, 0, 0.2);
-    }
-
-    .product-image {
-      position: relative;
-      height: 300px;
-      overflow: hidden;
-    }
-
-    .product-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .featured-product:hover .product-image img {
-      transform: scale(1.05);
-    }
-
-    .discount-badge {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background: linear-gradient(135deg, #B30000, #8A0000);
-      color: white;
-      padding: 0.4rem 0.8rem;
-      border-radius: 4px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      z-index: 2;
-    }
-
-    .product-actions {
-      position: absolute;
-      bottom: -50px;
-      left: 0;
-      width: 100%;
-      padding: 1rem;
-      background: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(5px);
-      display: flex;
-      justify-content: center;
-      transition: bottom 0.3s ease;
-      z-index: 2;
-    }
-
-    .featured-product:hover .product-actions {
-      bottom: 0;
-    }
-
-    .quick-view {
-      background: linear-gradient(135deg, #B30000, #8A0000);
-      color: white;
-      text-decoration: none;
-      padding: 0.5rem 1.5rem;
-      border-radius: 4px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-
-    .quick-view:hover {
-      background: linear-gradient(135deg, #8A0000, #B30000);
-      transform: translateY(-2px);
-    }
-
-    .product-details {
-      padding: 1.5rem;
-    }
-
-    .product-title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin: 0 0 1rem;
-      color: #333;
-    }
-
-    .product-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
-
-    .product-price {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .current-price {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #B30000;
-    }
-
-    .original-price {
-      font-size: 0.9rem;
-      color: #999;
-      text-decoration: line-through;
-    }
-
-    .product-rating {
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-    }
-
-    .stars {
-      color: #D4AF37;
-      font-size: 0.9rem;
-    }
-
-    .count {
-      color: #999;
-      font-size: 0.8rem;
-    }
-
-    .product-description {
-      font-size: 0.9rem;
-      color: #666;
-      margin-bottom: 1.5rem;
-      line-height: 1.5;
-    }
-
-    .product-cta {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .buy-now-btn,
-    .add-to-cart-btn {
-      flex: 1;
-      text-align: center;
-      text-decoration: none;
-      padding: 0.8rem 0;
-      border-radius: 4px;
-      font-weight: 500;
-      font-size: 0.9rem;
-      transition: all 0.3s ease;
-    }
-
-    .buy-now-btn {
-      background: linear-gradient(135deg, #B30000, #8A0000);
-      color: white;
-    }
-
-    .buy-now-btn:hover {
-      background: linear-gradient(135deg, #8A0000, #B30000);
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(179, 0, 0, 0.2);
-    }
-
-    .add-to-cart-btn {
-      background: transparent;
-      color: #333;
-      border: 1px solid rgba(212, 175, 55, 0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-    }
-
-    .add-to-cart-btn:hover {
-      background: rgba(212, 175, 55, 0.1);
-      border-color: #D4AF37;
-      transform: translateY(-2px);
-    }
-
-    .view-all-container {
-      text-align: center;
-    }
-
-    .view-all-btn {
-      display: inline-block;
-      background: linear-gradient(135deg, #D4AF37, #B8860B);
-      color: white;
-      text-decoration: none;
-      padding: 1rem 2.5rem;
-      border-radius: 4px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
-    }
-
-    .view-all-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
-    }
-
-    @media (max-width: 992px) {
-      .featured-products {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .featured-collection-section {
-        padding: 4rem 0;
-      }
-
-      .featured-title {
-        font-size: 2.2rem;
-      }
-
-      .featured-products {
-        grid-template-columns: 1fr;
-      }
-
-      .product-cta {
-        flex-direction: column;
-      }
-    }
-  </style>
-
-  <!-- 6. TESTIMONIALS - Trust Building -->
-  <div id="testimonials" class="gjs-grid-row testimonial-section">
-    <div id="i0qnx4" class="gjs-grid-column">
-      <h3 id="testim-title" class="gjs-heading testimonial-title">What Our <span class="gold-accent">Customers</span>
-        Say</h3>
-
-      <div class="testimonial-slider">
-        <div class="testimonial-slides">
-          <!-- Testimonial 1 -->
-          <div class="testimonial-slide active">
-            <div class="testimonial-content">
-              <div class="testimonial-rating">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"
-                    fill="#D4AF37" />
-                </svg>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"
-                    fill="#D4AF37" />
-                </svg>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"
-                    fill="#D4AF37" />
-                </svg>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"
-                    fill="#D4AF37" />
-                </svg>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"
-                    fill="#D4AF37" />
-                </svg>
-              </div>
-              <p class="testimonial-text">"As a boutique owner, I rely on 11Sari.com for saree business insights. The
-                platform keeps me updated on celebrity saree trends and traditional weaving techniques, making it easier
-                to source and market authentic handloom sarees. Highly recommended!"</p>
-              <div class="testimonial-author">
-                <div class="author-image">
-                  <img src="https://source.unsplash.com/random/200x200/?woman,indian,professional" alt="Riya Verma">
-                </div>
-                <div class="author-info">
-                  <h4 class="author-name">Riya Verma</h4>
-                  <p class="author-title">Boutique Owner</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonial 2 -->
-          <div class="testimonial-slide">
-            <div class="testimonial-content">
-              <div class="testimonial-rating">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"
-                    fill="#D4AF37" />
-                </svg>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"
-                    fill="#D4AF37" />
-                </svg>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"
-                    fill="#D4AF37" />
-                </svg>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"
-                    fill="#D4AF37" />
-                </svg>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"
-                    fill="#D4AF37" />
-                </svg>
-              </div>
-              <p class="testimonial-text">"For my daughter's wedding, I wanted nothing but the best. The Bridal
-                Collection saree I purchased from 11Sari was beyond my expectations. The quality of silk and the
-                intricate gold zari work was exquisite. My daughter looked absolutely stunning!"</p>
-              <div class="testimonial-author">
-                <div class="author-image">
-                  <img src="https://source.unsplash.com/random/200x200/?woman,indian,elegant" alt="Sunita Sharma">
-                </div>
-                <div class="author-info">
-                  <h4 class="author-name">Sunita Sharma</h4>
-                  <p class="author-title">Mother of the Bride</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonial 3 -->
-          <div class="testimonial-slide">
-            <div class="testimonial-content">
-              <div class="testimonial-rating">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"
-                    fill="#D4AF37" />
-                </svg>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"
-                    fill="#D4AF37" />
-                </svg>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"
-                    fill="#D4AF37" />
-                </svg>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"
-                    fill="#D4AF37" />
-                </svg>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"
-                    fill="#D4AF37" />
-                </svg>
-              </div>
-              <p class="testimonial-text">"Being a fashion influencer, I'm very particular about the authenticity and
-                quality of sarees I wear. 11Sari has never disappointed me. Their collection perfectly balances
-                traditional craftsmanship with modern aesthetics. My followers always ask about the sarees I feature
-                from 11Sari."</p>
-              <div class="testimonial-author">
-                <div class="author-image">
-                  <img src="https://source.unsplash.com/random/200x200/?woman,indian,fashion" alt="Meera Kapoor">
-                </div>
-                <div class="author-info">
-                  <h4 class="author-name">Meera Kapoor</h4>
-                  <p class="author-title">Fashion Influencer</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-controls">
-          <button class="prev-testimonial">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 19.9201L8.47997 13.4001C7.70997 12.6301 7.70997 11.3701 8.47997 10.6001L15 4.08008"
-                stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </button>
-          <div class="testimonial-dots">
-            <span class="dot active" data-index="0"></span>
-            <span class="dot" data-index="1"></span>
-            <span class="dot" data-index="2"></span>
-          </div>
-          <button class="next-testimonial">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.91003 19.9201L15.43 13.4001C16.2 12.6301 16.2 11.3701 15.43 10.6001L8.91003 4.08008"
-                stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <style>
-    /* Enhanced Testimonial Section Styles */
-    .testimonial-section {
-      padding: 6rem 0;
-      background: linear-gradient(135deg, #fcf9f6, #fff);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .testimonial-section::before,
-    .testimonial-section::after {
-      content: '';
-      position: absolute;
-      border-radius: 50%;
-    }
-
-    .testimonial-section::before {
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(212, 175, 55, 0.03) 0%, transparent 70%);
-      top: -150px;
-      right: -150px;
-      z-index: 1;
-    }
-
-    .testimonial-section::after {
-      width: 350px;
-      height: 350px;
-      border: 2px solid rgba(179, 0, 0, 0.05);
-      bottom: -150px;
-      left: -100px;
-      z-index: 1;
-    }
-
-    .testimonial-title {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 3rem;
-      font-family: 'Playfair Display', serif;
-      position: relative;
-      z-index: 2;
-    }
-
-    .testimonial-slider {
-      max-width: 900px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
-    }
-
-    .testimonial-slides {
-      position: relative;
-      overflow: hidden;
-      height: 400px;
-    }
-
-    .testimonial-slide {
-      position: absolute;
-      width: 100%;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-      top: 0;
-      left: 0;
-    }
-
-    .testimonial-slide.active {
-      opacity: 1;
-      z-index: 2;
-    }
-
-    .testimonial-content {
-      background: white;
-      padding: 3rem;
-      border-radius: 16px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-      border: 1px solid rgba(212, 175, 55, 0.1);
-      position: relative;
-    }
-
-    .testimonial-content::before {
-      content: "\201C";
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      font-size: 8rem;
-      font-family: 'Playfair Display', serif;
-      color: rgba(212, 175, 55, 0.1);
-      line-height: 1;
-    }
-
-    .testimonial-rating {
-      display: flex;
-      gap: 5px;
-      margin-bottom: 1.5rem;
-      position: relative;
-      z-index: 2;
-    }
-
-    .testimonial-rating svg {
-      width: 24px;
-      height: 24px;
-    }
-
-    .testimonial-text {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      color: #555;
-      margin-bottom: 2rem;
-      position: relative;
-      z-index: 2;
-    }
-
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .author-image {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 3px solid white;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .author-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .author-name {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin: 0 0 0.3rem;
-      color: #333;
-    }
-
-    .author-title {
-      font-size: 0.9rem;
-      color: #888;
-      margin: 0;
-    }
-
-    .testimonial-controls {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 2rem;
-      gap: 2rem;
-    }
-
-    .prev-testimonial,
-    .next-testimonial {
-      background: white;
-      border: none;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      color: #555;
-      transition: all 0.3s ease;
-    }
-
-    .prev-testimonial:hover,
-    .next-testimonial:hover {
-      background: #B30000;
-      color: white;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(179, 0, 0, 0.2);
-    }
-
-    .prev-testimonial svg,
-    .next-testimonial svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    .testimonial-dots {
-      display: flex;
-      gap: 8px;
-    }
-
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #ddd;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .dot.active {
-      background: #B30000;
-      transform: scale(1.3);
-    }
-
-    @media (max-width: 768px) {
-      .testimonial-title {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-      }
-
-      .testimonial-content {
-        padding: 2rem;
-      }
-
-      .testimonial-text {
-        font-size: 1rem;
-      }
-
-      .testimonial-slides {
-        height: 450px;
-      }
-    }
-  </style>
-
-  <script>
-    // Testimonial slider functionality
-    document.addEventListener('DOMContentLoaded', function () {
-      const testimonialSlides = document.querySelectorAll('.testimonial-slide');
-      const testimonialDots = document.querySelectorAll('.testimonial-dots .dot');
-      const prevTestimonialBtn = document.querySelector('.prev-testimonial');
-      const nextTestimonialBtn = document.querySelector('.next-testimonial');
-      let currentTestimonial = 0;
-
-      // Show testimonial function
-      function showTestimonial(n) {
-        // Hide all slides
-        testimonialSlides.forEach(slide => {
-          slide.classList.remove('active');
-        });
-
-        // Remove active class from all dots
-        testimonialDots.forEach(dot => {
-          dot.classList.remove('active');
-        });
-
-        // Show the active slide and dot
-        testimonialSlides[n].classList.add('active');
-        testimonialDots[n].classList.add('active');
-
-        currentTestimonial = n;
-      }
-
-      // Next testimonial
-      function nextTestimonial() {
-        if (currentTestimonial >= testimonialSlides.length - 1) {
-          showTestimonial(0);
-        } else {
-          showTestimonial(currentTestimonial + 1);
-        }
-      }
-
-      // Previous testimonial
-      function prevTestimonial() {
-        if (currentTestimonial <= 0) {
-          showTestimonial(testimonialSlides.length - 1);
-        } else {
-          showTestimonial(currentTestimonial - 1);
-        }
-      }
-
-      // Event listeners
-      if (prevTestimonialBtn) {
-        prevTestimonialBtn.addEventListener('click', prevTestimonial);
-      }
-
-      if (nextTestimonialBtn) {
-        nextTestimonialBtn.addEventListener('click', nextTestimonial);
-      }
-
-      // Dot navigation
-      testimonialDots.forEach(dot => {
-        dot.addEventListener('click', function () {
-          const slideIndex = parseInt(this.getAttribute('data-index'));
-          showTestimonial(slideIndex);
-        });
-      });
-
-      // Auto slide every 5 seconds
-      setInterval(nextTestimonial, 5000);
-    });
-  </script>
-
-  <!-- 7. BLOG PREVIEW - Knowledge Sharing -->
-  <div class="blog-preview-section">
-    <div class="blog-preview-container">
-      <div class="section-header">
-        <span class="section-subtitle">SAREE INSIGHTS</span>
-        <h2 class="section-title">From Our <span class="highlight">Journal</span></h2>
-        <div class="accent-line"></div>
-        <p class="section-description">Discover the history, craftsmanship, and styling tips behind traditional and
-          contemporary sarees.</p>
-      </div>
-
-      <div class="blog-cards">
-        <div class="blog-card">
-          <div class="blog-image">
-            <img src="https://source.unsplash.com/random/600x400/?saree,weaving"
-              alt="Traditional Banarasi Weaving Techniques">
-            <span class="blog-category">Craft & Heritage</span>
-          </div>
-          <div class="blog-content">
-            <h3 class="blog-title">Traditional Banarasi Weaving Techniques That Define Luxury</h3>
-            <p class="blog-excerpt">Explore the intricate craftsmanship behind every Banarasi saree, from the
-              preparation of silk threads to the final gold zari work.</p>
-            <div class="blog-meta">
-              <span class="blog-date">May 12, 2023</span>
-              <a href="blogs.html" class="read-more">Read Article</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="blog-card">
-          <div class="blog-image">
-            <img src="https://source.unsplash.com/random/600x400/?saree,draping" alt="Modern Saree Draping Styles">
-            <span class="blog-category">Styling Guide</span>
-          </div>
-          <div class="blog-content">
-            <h3 class="blog-title">5 Contemporary Ways to Drape Your Saree for Modern Occasions</h3>
-            <p class="blog-excerpt">Discover innovative draping techniques that transform traditional sarees into
-              contemporary fashion statements perfect for any event.</p>
-            <div class="blog-meta">
-              <span class="blog-date">April 28, 2023</span>
-              <a href="blogs.html" class="read-more">Read Article</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="blog-card">
-          <div class="blog-image">
-            <img src="https://source.unsplash.com/random/600x400/?silk,fabric" alt="Caring for Silk Sarees">
-            <span class="blog-category">Care Guide</span>
-          </div>
-          <div class="blog-content">
-            <h3 class="blog-title">The Ultimate Guide to Preserving Your Silk Saree Collection</h3>
-            <p class="blog-excerpt">Learn expert tips on storing, cleaning, and maintaining your precious silk sarees to
-              ensure they remain heirlooms for generations.</p>
-            <div class="blog-meta">
-              <span class="blog-date">April 15, 2023</span>
-              <a href="blogs.html" class="read-more">Read Article</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="blog-cta">
-        <a href="blogs.html" class="blog-view-all">View All Articles</a>
-      </div>
-    </div>
-  </div>
-  <!-- End Blog Preview Section -->
-
-  <!-- 8. SOCIAL SHARING - Community Building -->
-  <div class="social-share-section">
-    <div class="container">
-      <h2>Share the <span class="highlight-red">Magic</span> of Banarasi Sarees</h2>
-      <p>Love our collection? Share it with friends and family who appreciate authentic craftsmanship.</p>
-
-      <div class="share-container">
-        <div class="share-image">
-          <img src="https://source.unsplash.com/random/600x400/?saree,silk,indian" alt="Beautiful Banarasi Saree"
-            class="share-preview">
-          <div class="share-overlay">
-            <span>11Sari.com</span>
-          </div>
-        </div>
-
-        <div class="share-options">
-          <p class="share-text">Spotted a saree you love? Share it now and <span class="highlight-red">get 10%
-              off</span> on your next purchase!</p>
-
-          <div class="share-buttons">
-            <button class="share-button whatsapp-share">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path
-                  d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
-              </svg>
-              WhatsApp
-            </button>
-
-            <button class="share-button facebook-share">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path
-                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-              </svg>
-              Facebook
-            </button>
-
-            <button class="share-button instagram-share">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path
-                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-              </svg>
-              Instagram
-            </button>
-
-            <button class="share-button pinterest-share">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path
-                  d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0z" />
-              </svg>
-              Pinterest
-            </button>
-          </div>
-
-          <div class="share-coupon">
-            <p>Use code: <span class="coupon-code">SHARE10</span></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <style>
-    /* Social Sharing Section Styling */
-    .social-share-section {
-      padding: 5rem 0;
-      background: linear-gradient(135deg, #fff5f5, #fff9f9);
-      text-align: center;
-    }
-
-    .social-share-section h2 {
-      color: #8B0000;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .social-share-section p {
-      max-width: 700px;
-      margin: 0 auto 2rem;
-      color: #555;
-      font-size: 1.1rem;
-    }
-
-    .share-container {
-      display: flex;
-      max-width: 1000px;
-      margin: 0 auto;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 10px 30px rgba(179, 0, 0, 0.1);
-      overflow: hidden;
-    }
-
-    .share-image {
-      flex: 1;
-      position: relative;
-    }
-
-    .share-preview {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .share-overlay {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      background: rgba(179, 0, 0, 0.8);
-      color: white;
-      padding: 8px 15px;
-      border-radius: 20px;
-      font-weight: bold;
-    }
-
-    .share-options {
-      flex: 1;
-      padding: 3rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .share-text {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    .share-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-      margin-bottom: 2rem;
-    }
-
-    .share-button {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 20px;
-      border-radius: 50px;
-      border: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .whatsapp-share {
-      background: #25D366;
-      color: white;
-    }
-
-    .facebook-share {
-      background: #3b5998;
-      color: white;
-    }
-
-    .instagram-share {
-      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-      color: white;
-    }
-
-    .pinterest-share {
-      background: #E60023;
-      color: white;
-    }
-
-    .share-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    }
-
-    @media (max-width: 768px) {
-      .google-rating {
-        flex-direction: column;
-      }
-
-      .google-stars {
-        margin-right: 0;
-        margin-bottom: 0.5rem;
-      }
-    }
-  </style>
-
-  <script>
-    // Add any additional JS here
-  </script>
-
-  <!-- 9. FAQ SECTION - Addressing Concerns -->
-  <div class="faq-section">
-    <div class="faq-container">
-      <div class="section-header">
-        <span class="section-subtitle">COMMON QUESTIONS</span>
-        <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
-        <div class="accent-line"></div>
-        <p class="section-description">Find answers to the most common questions about our sarees, ordering process, and
-          shipping policies.</p>
-      </div>
-
-      <div class="faq-wrapper">
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>What makes Banarasi silk sarees special?</h3>
-            <button class="toggle-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 12H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M12 18V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </button>
-          </div>
-          <div class="faq-answer">
-            <p>Banarasi silk sarees are renowned for their gold and silver zari work, intricate designs, and dense silk
-              weave. The designs often feature traditional motifs like floral patterns, paisleys, and intricate borders.
-              Each saree takes anywhere from 15 days to 6 months to create by skilled artisans who have inherited this
-              craft through generations.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>How do I care for my silk saree?</h3>
-            <button class="toggle-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 12H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M12 18V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </button>
-          </div>
-          <div class="faq-answer">
-            <p>We recommend dry cleaning for your precious silk sarees. If hand washing is necessary, use cold water
-              with a mild detergent designed for silk. Never wring the saree; instead, gently squeeze out excess water
-              and roll it in a towel. Air dry in shade and store in a cotton or muslin cloth, away from direct sunlight.
-              Store with silica gel packets to prevent moisture damage.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>Do you ship internationally?</h3>
-            <button class="toggle-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 12H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M12 18V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </button>
-          </div>
-          <div class="faq-answer">
-            <p>Yes, we offer worldwide shipping. International orders typically take 7-14 business days to arrive,
-              depending on your location. We use trusted courier services with tracking capabilities to ensure your
-              precious sarees reach you safely. Please note that customs duties and taxes are the responsibility of the
-              recipient.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>What is your return policy?</h3>
-            <button class="toggle-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 12H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M12 18V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </button>
-          </div>
-          <div class="faq-answer">
-            <p>We accept returns within 7 days of delivery for unworn items in their original packaging with tags
-              attached. Please note that custom-made or personalized sarees cannot be returned unless there is a
-              manufacturing defect. Contact our customer service team to initiate a return process.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>Are your sarees authentic handloom products?</h3>
-            <button class="toggle-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 12H18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M12 18V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </button>
-          </div>
-          <div class="faq-answer">
-            <p>Absolutely. Every saree in our collection is handwoven by master artisans from Varanasi. We source
-              directly from the weavers' communities and ensure fair trade practices. Each saree comes with a
-              certificate of authenticity detailing the weaving technique, materials used, and the artisan's
-              information.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End FAQ Section -->
-
-  <!-- 10. WAITLIST SECTION - Final Call to Action -->
-  <div id="waitlist" class="gjs-grid-row waitlist-section">
-    <div class="waitlist-content">
-      <h2 class="waitlist-title">Join Our Waitlist & Win a Free Saree!</h2>
-      <p class="waitlist-description">Be the first to know about our exclusive collections, special offers, and
-        limited-edition releases. Plus, get a chance to win a handcrafted Banarasi silk saree worth ₹20,000!</p>
-
-      <div class="benefits-box">
-        <div class="benefit-item">
-          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-          </svg>
-          <span>Early access to new saree collections</span>
-        </div>
-        <div class="benefit-item">
-          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-          </svg>
-          <span>Exclusive discounts on premium silk sarees</span>
-        </div>
-        <div class="benefit-item">
-          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-          </svg>
-          <span>Insider tips on styling traditional & designer sarees</span>
-        </div>
-        <div class="benefit-item">
-          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-          </svg>
-          <span>Free shipping on your first order</span>
-        </div>
-      </div>
-
-      <button class="waitlist-button" onclick="openWaitlistModal()">Join Waitlist</button>
-    </div>
-  </div>
-
-  <!-- 11. WHATSAPP CHAT BUTTON - Always Available -->
+  <!-- WhatsApp Button & Cookie Consent Banner -->
   <a href="https://wa.me/919663495817" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
     <div class="whatsapp-tooltip">Chat with us on WhatsApp</div>
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -3673,8 +2495,6 @@
         d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
     </svg>
   </a>
-
-  <!-- Your existing Scripts -->
 
   <!-- Cookie Privacy Consent Banner -->
   <div id="cookie-consent-banner" class="cookie-consent-banner">
