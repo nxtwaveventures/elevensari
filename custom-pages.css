@@ -370,3 +370,143 @@ body {
         padding: 0.4rem 0.6rem;
     }
 }
+
+/* Policy Pages Styling */
+.policy-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.policy-container h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+    font-size: 36px;
+}
+
+.policy-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.policy-content section {
+    margin-bottom: 30px;
+}
+
+.policy-content h2 {
+    color: #222;
+    font-size: 24px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.policy-content h3 {
+    color: #333;
+    font-size: 20px;
+    margin: 20px 0 10px;
+}
+
+.policy-content p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.policy-content ul,
+.policy-content ol {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    padding-left: 25px;
+}
+
+.policy-content li {
+    margin-bottom: 8px;
+}
+
+.policy-content a {
+    color: #b87333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.policy-content a:hover {
+    color: #8c5727;
+    text-decoration: underline;
+}
+
+.policy-footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #777;
+    font-size: 14px;
+}
+
+/* Footer Links Styling */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #b87333;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #8c5727;
+    text-decoration: underline;
+}
+
+.footer-links a.active {
+    color: #8c5727;
+    font-weight: 600;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .policy-container {
+        margin: 30px auto;
+    }
+
+    .policy-content {
+        padding: 25px;
+    }
+
+    .policy-container h1 {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .policy-content h2 {
+        font-size: 22px;
+    }
+
+    .policy-content h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .policy-content {
+        padding: 20px 15px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links a {
+        margin: 5px 0;
+    }
+}
