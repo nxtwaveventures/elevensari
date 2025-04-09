@@ -17,6 +17,21 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./custom-pages.css">
     <style>
+        :root {
+            --primary-color: #2F5D8C;
+            --primary-dark: #1A3A57;
+            --accent-color: #D4AF37;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --border-light: #E5E5E5;
+            --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --font-sans: 'Inter', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+            --font-body: var(--font-sans);
+            --font-heading: var(--font-serif);
+        }
+
         .collection-header {
             background: linear-gradient(135deg, #2F5D8C, #1A3A57);
             padding: 4rem 2rem;
@@ -50,6 +65,103 @@
             margin: 0 auto;
             position: relative;
             z-index: 1;
+        }
+
+        /* Featured Collection Styles */
+        .featured-collection {
+            margin: 0 auto 4rem;
+            max-width: 1200px;
+            padding: 0 2rem;
+        }
+
+        .featured-container {
+            display: flex;
+            background: white;
+            border-radius: 0.8rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(47, 93, 140, 0.1);
+        }
+
+        .featured-image {
+            flex: 1;
+            min-height: 400px;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .featured-content {
+            flex: 1;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .featured-tag {
+            display: inline-block;
+            background: rgba(47, 93, 140, 0.1);
+            color: #2F5D8C;
+            padding: 0.4rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .featured-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: #2F5D8C;
+        }
+
+        .featured-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+        }
+
+        .featured-cta {
+            background: linear-gradient(135deg, #2F5D8C, #1A3A57);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            align-self: flex-start;
+        }
+
+        .featured-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(47, 93, 140, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .featured-container {
+                flex-direction: column;
+            }
+
+            .featured-image {
+                min-height: 300px;
+            }
+
+            .featured-content {
+                padding: 2rem;
+            }
+
+            .featured-content h2 {
+                font-size: 1.8rem;
+            }
         }
 
         .product-grid {
@@ -230,9 +342,26 @@
     </header>
 
     <div class="collection-header">
-        <h1>Elegant Salwar Suit Collection</h1>
-        <p>Explore our premium range of handcrafted Indian salwar suits, designed with intricate embroidery and
-            luxurious fabrics for every occasion.</p>
+        <h1>Elegant Indian Salwar Suit Collection</h1>
+        <p>Discover our premium range of authentic Indian salwar suits, carefully crafted with traditional techniques
+            and
+            contemporary designs.</p>
+    </div>
+
+    <!-- Contemporary Elegance Featured Section -->
+    <div class="featured-collection">
+        <div class="featured-container">
+            <div class="featured-image">
+                <img src="assets/images/collections/contemporary-elegance.jpg" alt="Contemporary Elegance Collection">
+            </div>
+            <div class="featured-content">
+                <span class="featured-tag">NEW ARRIVAL</span>
+                <h2>Contemporary Elegance</h2>
+                <p>Our newest collection blends traditional craftsmanship with modern silhouettes. Each suit is designed
+                    for the contemporary woman who values both heritage and style.</p>
+                <a href="#" class="featured-cta">Explore Collection</a>
+            </div>
+        </div>
     </div>
 
     <div class="filter-bar">
