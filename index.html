@@ -271,7 +271,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      background: linear-gradient(135deg, rgba(179, 0, 0, 0.97), rgba(139, 0, 0, 0.97));
+      background: linear-gradient(135deg, #f8d7da, #f1e7fe);
       box-shadow: 0 2px 10px rgba(139, 0, 0, 0.2);
       z-index: 1000;
       backdrop-filter: blur(10px);
@@ -317,7 +317,7 @@
     }
 
     .main-nav .nav-link {
-      color: white;
+      color: #333;
       text-decoration: none;
       font-weight: 500;
       font-size: 1rem;
@@ -328,7 +328,7 @@
     }
 
     .main-nav .nav-link:hover {
-      color: #ffcccc;
+      color: #555;
     }
 
     .main-nav .nav-link::after {
@@ -338,7 +338,7 @@
       height: 2px;
       bottom: 0;
       left: 50%;
-      background: linear-gradient(to right, #ffcccc, #ffffff);
+      background: linear-gradient(to right, #f1e7fe, #f8d7da);
       transition: all 0.3s ease;
       transform: translateX(-50%);
     }
@@ -1759,6 +1759,25 @@
 
     .share-button i {
       font-size: 16px;
+    }
+  </style>
+
+  <style>
+    .hero-tab {
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.5rem 0.8rem;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      background: linear-gradient(135deg, #f8d7da, #f1e7fe);
+      margin-right: 1rem;
+    }
+
+    .hero-tab:hover {
+      color: #555;
+      background: linear-gradient(135deg, #f1e7fe, #d1c4e9);
     }
   </style>
 </head>
