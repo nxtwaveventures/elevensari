@@ -2,23 +2,342 @@
 <html lang="en">
 
 <head>
-    <title>Bridal 11Sari Gift Box - Premium Wedding Collection</title>
+    <title>Bridal Gift Boxes - 11Sari</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index,follow">
+    <meta name="generator" content="GrapesJS Studio">
     <meta name="description"
-        content="Exquisite 11Sari Bridal Gift Box - A traditional collection of 11 premium handcrafted sarees for the perfect wedding gift. Customizable and elegantly packaged.">
+        content="Discover our luxurious Bridal Gift Boxes featuring premium sarees and accessories for the perfect wedding gift.">
     <meta name="keywords"
         content="bridal saree, wedding gift, 11 saree gift box, wedding tradition, banarasi saree, silk saree">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <!-- Load our design system CSS first -->
     <link rel="stylesheet" href="custom-pages.css">
     <!-- Then load any additional styles -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #B30000;
+            --primary-dark: #8A0000;
+            --accent-color: #D4AF37;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --border-light: #FFE4E4;
+            --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --font-sans: 'Inter', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+            --font-body: var(--font-sans);
+            --font-heading: var(--font-serif);
+        }
+
+        .gift-header {
+            background: linear-gradient(135deg, #B30000, #8A0000);
+            padding: 6rem 2rem;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 4rem;
+        }
+
+        .gift-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            z-index: 0;
+        }
+
+        .gift-header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .gift-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-family: var(--font-serif);
+        }
+
+        .gift-header p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .gift-detail-section {
+            max-width: 1200px;
+            margin: 0 auto 5rem;
+            padding: 0 2rem;
+        }
+
+        .gift-box-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .gift-box-gallery {
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+
+        .gift-main-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        .gift-thumbnails {
+            display: flex;
+            gap: 0.5rem;
+            padding: 1rem;
+            background: white;
+        }
+
+        .gift-thumbnail {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .gift-thumbnail:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .gift-thumbnail.active {
+            opacity: 1;
+            border-color: var(--accent-color);
+        }
+
+        .gift-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .gift-info h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-family: var(--font-serif);
+        }
+
+        .gift-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .gift-price-box {
+            background: rgba(255, 245, 245, 0.8);
+            padding: 1.5rem;
+            border-radius: 0.8rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-light);
+        }
+
+        .gift-price-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .gift-price-row:last-child {
+            margin-bottom: 0;
+            padding-top: 1rem;
+            border-top: 1px dashed rgba(179, 0, 0, 0.2);
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        .gift-price-label {
+            color: var(--text-primary);
+        }
+
+        .gift-price-value {
+            color: var(--primary-color);
+        }
+
+        .gift-box-contents {
+            margin-bottom: 2rem;
+        }
+
+        .gift-box-contents h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .contents-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .contents-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(230, 230, 230, 0.5);
+        }
+
+        .contents-item:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+
+        .item-icon {
+            margin-right: 1rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
+        .item-details h4 {
+            margin: 0 0 0.3rem;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+        }
+
+        .item-details p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .gift-cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .gift-buy-btn {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(179, 0, 0, 0.25);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .gift-buy-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(179, 0, 0, 0.35);
+        }
+
+        .gift-enquire-btn {
+            background: white;
+            color: var(--primary-color);
+            padding: 1rem 2.5rem;
+            border: 1px solid var(--primary-color);
+            border-radius: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .gift-enquire-btn:hover {
+            background-color: rgba(179, 0, 0, 0.05);
+        }
+
+        .related-gift-boxes {
+            margin-top: 5rem;
+        }
+
+        .related-gift-boxes h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+            font-family: var(--font-serif);
+        }
+
+        .related-boxes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        @media (max-width: 992px) {
+            .gift-box-details {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .related-boxes-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gift-header {
+                padding: 4rem 1.5rem;
+            }
+
+            .gift-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .gift-cta-buttons {
+                flex-direction: column;
+            }
+
+            .related-boxes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gift-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .gift-thumbnails {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -49,11 +368,11 @@
     <section class="hero-section">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Bridal 11Sari Gift Box</h1>
-                <h2 class="hero-subtitle">A Timeless Wedding Tradition</h2>
+                <h1 class="hero-title">Bridal Gift Boxes</h1>
+                <h2 class="hero-subtitle">Exquisite Collections for the Perfect Wedding Gift</h2>
                 <p class="hero-description">
-                    Honor the sacred tradition of gifting 11 exquisite sarees in a premium keepsake box.
-                    Each collection is thoughtfully curated to celebrate the bride's journey into her new life.
+                    Discover our luxurious Bridal Gift Boxes featuring premium sarees, jewelry, and accessories for the
+                    most special occasions.
                 </p>
                 <div class="hero-cta-container">
                     <a href="#customize" class="btn">Customize Your Gift Box</a>
@@ -359,6 +678,25 @@
                     } else {
                         content.style.maxHeight = content.scrollHeight + 'px';
                     }
+                });
+            });
+        });
+    </script>
+
+    <script>
+        // Simple image gallery script
+        document.addEventListener('DOMContentLoaded', function () {
+            const thumbnails = document.querySelectorAll('.gift-thumbnail');
+            const mainImage = document.querySelector('.gift-main-image');
+
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function () {
+                    // Update main image
+                    mainImage.src = this.src;
+
+                    // Update active state
+                    thumbnails.forEach(thumb => thumb.classList.remove('active'));
+                    this.classList.add('active');
                 });
             });
         });
