@@ -35,6 +35,11 @@ jobs:
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
+        with:
+          enablement: true
+      
+      - name: Create CNAME
+        run: echo "11sari.com" > ./dist/CNAME
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -44,7 +49,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://11sari.com
     runs-on: ubuntu-latest
     needs: build
     steps:
